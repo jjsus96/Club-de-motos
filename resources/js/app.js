@@ -13,3 +13,8 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+
+/** Menú de navegación */
+
+require('./components/Menu');
+
