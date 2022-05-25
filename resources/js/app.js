@@ -18,3 +18,7 @@ require('./components/Example');
 
 require('./components/Menu');
 
+/** Footer */
+
+require('./components/Footer');
+

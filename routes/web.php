@@ -21,9 +21,12 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); });
+Route::get('/club', function () { return view('club'); });
+Route::get('/evento', function () { return view('evento'); });
+Route::get('/galeria', function () { return view('galeria'); });
+Route::get('/socio', function () { return view('socio'); });
+Route::get('/unete', function () { return view('unete'); });
 
 Auth::routes();
 

@@ -1,0 +1,128 @@
+/*Mantener el footer abajo*/
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+//general
+
+.footer-general{
+	background-color: #191919;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	padding: 20px 0px 10px 0px;
+    border-top: 4px solid #4FFF00;
+}
+
+.footer-general .footer-izq,
+.footer-general .footer-cntr,
+.footer-general .footer-der{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer Izquierdo */
+
+.footer-general .footer-izq{
+	width: 30%;
+}
+
+/* Footer Central */
+
+.footer-general .footer-cntr{
+	width: 40%;
+}
+
+.footer-general .footer-cntr p{
+	display: inline-block;
+	color: #ffffff;
+}
+
+.footer-general .footer-cntr p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+
+/* Footer Derecho */
+
+.footer-general .footer-der{
+	width: 30%;
+    color:  #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -30px;
+}
+
+.footer-general .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #f1f1f1;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+    margin-top: 20px;
+}
+
+.logofooter{
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.fegam{
+    width: 350px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.marcafooter{
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.enlaces-footer{
+    display: block;
+}
+
+/* Responsive */
+
+
+@media (max-width: 900px) {
+
+	.footer-general .footer-izq,
+	.footer-general .footer-cntr,
+	.footer-general .footer-der{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-general .footer-cntr i{
+		margin-left: 0;
+	}
+
+    .fegam{
+        width: 300px;
+        display: block;
+        margin: auto;
+    }
+
+}

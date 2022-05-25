@@ -1,49 +1,65 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../sass/menu.scss';
-import logo from'../../img/recursos/logo.png'
-import {useState, useEffect} from 'react'
+import logo from '../../img/recursos/logo.png'
+import { useState, useEffect } from 'react'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+
 
 function Menu() {
 
-        const [toggleMenu, setToggleMenu] = useState(false)
-        const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    // Define el estado del menú a falso para que por defecto no muestre el desplegable.
 
+    const [cambiomenu, setcambiomenu] = useState(false)
 
-        const toggleNav = () => {
-          setToggleMenu(!toggleMenu)
+    // Detecta el ancho de la pantalla.
+
+    const [tamanopantalla, settamanopantalla] = useState(window.innerWidth)
+
+    // Despliega/oculta el menú al hacer click en el botón.
+
+    const toggleNav = () => {
+        setcambiomenu(!cambiomenu)
+    }
+
+    // Se ejecuta cada vez que la ventana se redimensione y actualiza el estado alternando entre los menús.
+
+    useEffect(() => {
+
+        const changeWidth = () => {
+            settamanopantalla(window.innerWidth);
         }
 
-        useEffect(() => {
+        window.addEventListener('resize', changeWidth)
 
-          const changeWidth = () => {
-            setScreenWidth(window.innerWidth);
-          }
+        return () => {
+            window.removeEventListener('resize', changeWidth)
+        }
 
-          window.addEventListener('resize', changeWidth)
-
-          return () => {
-              window.removeEventListener('resize', changeWidth)
-          }
-
-        }, [])
+    }, [])
 
     return (
         <nav>
-            {(toggleMenu || screenWidth > 500) && (
-            <ul className="list">
-                <img className='logo' src={logo}></img>
-                <li className="left"><a href="/login">Inicio</a></li>
-                <li className="left"><a href="/login">Club</a></li>
-                <li className="left"><a href="/login">Eventos</a></li>
-                <li className="left"><a href="/login">Galería</a></li>
-                <li className="left"><a href="/login">Socios</a></li>
-                <li className="left"><a href="/login">Únete</a></li>
-                <li className="right"><a href="/login">Login</a></li>
-                <li className="right"><a href="/register">Registro</a></li>
-            </ul>
+            <img className='logomovil' src={logo}></img>
+            {(cambiomenu || tamanopantalla > 900) && (
+                <ul className="list">
+                    <img className='logo' src={logo}></img>
+                    <div className='leftmenu'>
+                        <li className="enlace-menu"><a href="/">Inicio</a></li>
+                        <li className="enlace-menu"><a href="/club">Club</a></li>
+                        <li className="enlace-menu"><a href="/evento">Eventos</a></li>
+                        <li className="enlace-menu"><a href="/galeria">Galería</a></li>
+                        <li className="enlace-menu"><a href="/socio">Socios</a></li>
+                        <li className="enlace-menu"><a href="/unete">Únete</a></li>
+                    </div>
+                    <div className='rightmenu'>
+                        <li className="enlace-menu"><a href="/login">Login</a></li>
+                        <li className="enlace-menu"><a href="/register">Registro</a></li>
+                    </div>
+                </ul>
             )}
-            <button onClick={toggleNav} className="btn">BTN</button>
+
+            <button onClick={toggleNav} className="btn"><i class="fa-solid fa-bars"></i></button>
         </nav>
     );
 }

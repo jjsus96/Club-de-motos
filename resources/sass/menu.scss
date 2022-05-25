@@ -1,9 +1,10 @@
 nav {
     position: fixed;
-    top: 0;
     width: 100%;
+    margin-top: -25px;
     background: #191919;
     border-bottom: 4px solid #4FFF00;
+    z-index: 100;
   }
 
   .list {
@@ -12,18 +13,10 @@ nav {
     height: 100%;
     display: flex;
     position: relative;
+    padding: 0;
   }
 
-  .left {
-    margin-right: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #f1f1f1;
-    cursor: pointer;
-    align-items: left;
-  }
-
-  .right {
+  .enlace-menu {
     margin-right: 20px;
     font-size: 20px;
     text-transform: uppercase;
@@ -43,42 +36,96 @@ nav {
   .logo{
       height: 50px;
       width: 50px;
-      margin-right: 20px;
+      margin-right: 40px;
+      margin-left: 20px;
       margin-top: -10px;
       margin-bottom: -20px;
   }
 
-  @media screen and (max-width: 500px) {
+  .logomovil{
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+}
+
+  .leftmenu{
+    width:100%;
+    display: flex;
+}
+
+  .rightmenu{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+  @media screen and (max-width: 900px) {
+
+    nav {
+        position: fixed;
+        width: 100%;
+        margin-top: 0px;
+        background: #191919;
+        border-bottom: 4px solid #4FFF00;
+      }
+
     .list {
       flex-direction: column;
       margin-left: auto;
       margin-right: auto;
       height: auto;
+      padding: 0;
+    }
+
+    .leftmenu{
+        width:100%;
+        display: block;
+        justify-content: center;
+    }
+
+      .rightmenu{
+        width:100%;
+        display: block;
+        justify-content: center;
     }
 
     .logo{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 10px;
+        width: 0px;
+        height: 0px;
+        display: block;
+        justify-content: center;
+        visibility: hidden;
     }
 
-    .left {
+    .logomovil{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 50px;
+        width: 50px;
+        display: block;
+        justify-content: center;
+        visibility: visible;
+    }
+
+
+    .enlace-menu {
       width: 100%;
-      border-top: 1px solid rgba(255, 255, 255, 0.555);
       text-align: center;
-      margin-right: 0px;
-      padding: 10px 0;
-    }
+      border-top: 1px solid rgba(255, 255, 255, 0.555);
+      padding: 15px 0;
 
-    .right{
-        width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.555);
-        text-align: center;
-        margin-right: 0px;
-        padding: 10px 0;
-      }
+    }
 
     .btn {
       display: block;
+      border: none;
+      margin-top: 17px;
+      background-color: transparent;
+      color: #f1f1f1;
     }
   }
