@@ -23,7 +23,6 @@
     <body class="antialiased">
         <div id="menu"></div>
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <br><br><br><br><br><br><br><br><br><br>
         <div id="footer"></div>
     </body>
 </html>

@@ -5502,21 +5502,21 @@ __webpack_require__.r(__webpack_exports__);
 
 function Footer() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("footer", {
-    "class": "footer-general",
+    className: "footer-general",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-      "class": "footer-izq",
+      className: "footer-izq",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
         className: "fegam",
         src: _img_recursos_Fegam_png__WEBPACK_IMPORTED_MODULE_4__["default"]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-      "class": "footer-cntr",
+      className: "footer-cntr",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
         className: "logofooter",
         src: _img_recursos_logo_png__WEBPACK_IMPORTED_MODULE_5__["default"]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      "class": "footer-der",
+      className: "footer-der",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
         className: "enlaces-footer",
         href: "#",
@@ -5530,26 +5530,26 @@ function Footer() {
         href: "#",
         children: "POL\xCDTICA DE COOKIES"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        "class": "footer-icons",
+        className: "footer-icons",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
-          "class": "footer-links",
+          className: "footer-links",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
             className: "iconos",
             href: "https://www.facebook.com/groups/1859832864245482/",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
-              "class": "fa-brands fa-facebook-f"
+              className: "fa-brands fa-facebook-f"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
             className: "iconos",
             href: "https://www.instagram.com/motoclubcadizruteando/",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
-              "class": "fa-brands fa-instagram"
+              className: "fa-brands fa-instagram"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
             className: "iconos",
             href: "https://www.youtube.com/channel/UCQAGBKaZ7z2fDE-9z8CKtTw",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
-              "class": "fa-brands fa-youtube"
+              className: "fa-brands fa-youtube"
             })
           })]
         })
@@ -5702,9 +5702,9 @@ function Menu() {
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
       onClick: toggleNav,
-      className: "btn",
+      className: "btn-menu",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
-        "class": "fa-solid fa-bars"
+        className: "fa-solid fa-bars"
       })
     })]
   });
@@ -10813,7 +10813,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*Mantener el footer abajo*/\nfooter {\n  position: fixed;\n  bottom: 0;\n}\n\n@media (max-height: 800px) {\n  footer {\n    position: static;\n  }\n\n  header {\n    padding-top: 40px;\n  }\n}\n.footer-general {\n  background-color: #191919;\n  box-sizing: border-box;\n  width: 100%;\n  text-align: left;\n  padding: 20px 0px 10px 0px;\n  border-top: 4px solid #4FFF00;\n}\n\n.footer-general .footer-izq,\n.footer-general .footer-cntr,\n.footer-general .footer-der {\n  display: inline-block;\n  vertical-align: top;\n}\n\n/* Footer Izquierdo */\n.footer-general .footer-izq {\n  width: 30%;\n}\n\n/* Footer Central */\n.footer-general .footer-cntr {\n  width: 40%;\n}\n\n.footer-general .footer-cntr p {\n  display: inline-block;\n  color: #ffffff;\n}\n\n.footer-general .footer-cntr p span {\n  display: block;\n  font-weight: normal;\n  font-size: 14px;\n  line-height: 2;\n}\n\n/* Footer Derecho */\n.footer-general .footer-der {\n  width: 30%;\n  color: #ffffff;\n  text-align: center;\n  margin-top: 20px;\n  margin-bottom: -30px;\n}\n\n.footer-general .footer-icons a {\n  display: inline-block;\n  width: 35px;\n  height: 35px;\n  background-color: #33383b;\n  border-radius: 2px;\n  font-size: 20px;\n  color: #f1f1f1;\n  text-align: center;\n  line-height: 35px;\n  margin-right: 3px;\n  margin-top: 20px;\n}\n\n.logofooter {\n  width: 150px;\n  display: block;\n  text-align: center;\n  margin: auto;\n}\n\n.fegam {\n  width: 350px;\n  display: block;\n  margin: auto;\n  margin-top: 50px;\n}\n\n.marcafooter {\n  text-align: center;\n  color: #f1f1f1;\n}\n\n.enlaces-footer {\n  display: block;\n}\n\n/* Responsive */\n@media (max-width: 900px) {\n  .footer-general .footer-izq,\n.footer-general .footer-cntr,\n.footer-general .footer-der {\n    display: block;\n    width: 100%;\n    margin-bottom: 40px;\n    text-align: center;\n  }\n\n  .footer-general .footer-cntr i {\n    margin-left: 0;\n  }\n\n  .fegam {\n    width: 300px;\n    display: block;\n    margin: auto;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*Mantener el footer abajo*/\nfooter {\n  position: fixed;\n  bottom: 0;\n}\n\n@media (max-height: 800px) {\n  footer {\n    position: static;\n  }\n\n  header {\n    padding-top: 40px;\n  }\n}\n.footer-general {\n  background-color: #191919;\n  box-sizing: border-box;\n  width: 100%;\n  text-align: left;\n  padding: 20px 0px 10px 0px;\n  border-top: 4px solid #4FFF00;\n}\n\n.footer-general .footer-izq,\n.footer-general .footer-cntr,\n.footer-general .footer-der {\n  display: inline-block;\n  vertical-align: top;\n}\n\n/* Footer Izquierdo */\n.footer-general .footer-izq {\n  width: 30%;\n}\n\n/* Footer Central */\n.footer-general .footer-cntr {\n  width: 40%;\n}\n\n.footer-general .footer-cntr p {\n  display: inline-block;\n  color: #ffffff;\n}\n\n.footer-general .footer-cntr p span {\n  display: block;\n  font-weight: normal;\n  font-size: 14px;\n  line-height: 2;\n}\n\n/* Footer Derecho */\n.footer-general .footer-der {\n  width: 30%;\n  color: #ffffff;\n  text-align: center;\n  margin-top: 20px;\n  margin-bottom: -30px;\n}\n\n.footer-general .footer-icons a {\n  display: inline-block;\n  width: 35px;\n  height: 35px;\n  background-color: #33383b;\n  border-radius: 2px;\n  font-size: 20px;\n  color: #f1f1f1;\n  text-align: center;\n  line-height: 35px;\n  margin-right: 3px;\n  margin-top: 20px;\n}\n\n.logofooter {\n  width: 150px;\n  display: block;\n  text-align: center;\n  margin: auto;\n}\n\n.fegam {\n  width: 350px;\n  display: block;\n  margin: auto;\n  margin-top: 50px;\n}\n\n.marcafooter {\n  text-align: center;\n  color: #f1f1f1;\n}\n\n.enlaces-footer {\n  display: block;\n}\n\n/* Responsive */\n@media (max-width: 900px) {\n  footer {\n    position: relative;\n    bottom: 0;\n  }\n\n  .footer-general .footer-izq,\n.footer-general .footer-cntr,\n.footer-general .footer-der {\n    display: block;\n    width: 100%;\n    margin-bottom: 40px;\n    text-align: center;\n  }\n\n  .footer-general .footer-cntr i {\n    margin-left: 0;\n  }\n\n  .fegam {\n    width: 300px;\n    display: block;\n    margin: auto;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10837,7 +10837,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "nav {\n  position: fixed;\n  width: 100%;\n  margin-top: -25px;\n  background: #191919;\n  border-bottom: 4px solid #4FFF00;\n  z-index: 100;\n}\n\n.list {\n  list-style-type: none;\n  background: #191919;\n  height: 100%;\n  display: flex;\n  position: relative;\n  padding: 0;\n}\n\n.enlace-menu {\n  margin-right: 20px;\n  font-size: 20px;\n  text-transform: uppercase;\n  color: #f1f1f1;\n  cursor: pointer;\n}\n\n.btn {\n  display: none;\n  position: absolute;\n  right: 10px;\n  top: 7px;\n  color: #000;\n  font-size: 18px;\n}\n\n.logo {\n  height: 50px;\n  width: 50px;\n  margin-right: 40px;\n  margin-left: 20px;\n  margin-top: -10px;\n  margin-bottom: -20px;\n}\n\n.logomovil {\n  height: 0px;\n  width: 0px;\n  visibility: hidden;\n}\n\n.leftmenu {\n  width: 100%;\n  display: flex;\n}\n\n.rightmenu {\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n}\n\n@media screen and (max-width: 900px) {\n  nav {\n    position: fixed;\n    width: 100%;\n    margin-top: 0px;\n    background: #191919;\n    border-bottom: 4px solid #4FFF00;\n  }\n\n  .list {\n    flex-direction: column;\n    margin-left: auto;\n    margin-right: auto;\n    height: auto;\n    padding: 0;\n  }\n\n  .leftmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .rightmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .logo {\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 10px;\n    width: 0px;\n    height: 0px;\n    display: block;\n    justify-content: center;\n    visibility: hidden;\n  }\n\n  .logomovil {\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    height: 50px;\n    width: 50px;\n    display: block;\n    justify-content: center;\n    visibility: visible;\n  }\n\n  .enlace-menu {\n    width: 100%;\n    text-align: center;\n    border-top: 1px solid rgba(255, 255, 255, 0.555);\n    padding: 15px 0;\n  }\n\n  .btn {\n    display: block;\n    border: none;\n    margin-top: 17px;\n    background-color: transparent;\n    color: #f1f1f1;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "nav {\n  position: fixed;\n  width: 100%;\n  margin-top: -25px;\n  background: #191919;\n  border-bottom: 4px solid #4FFF00;\n  z-index: 100;\n}\n\n.list {\n  list-style-type: none;\n  background: #191919;\n  height: 100%;\n  display: flex;\n  position: relative;\n  padding: 0;\n}\n\n.enlace-menu {\n  margin-right: 20px;\n  font-size: 20px;\n  text-transform: uppercase;\n  color: #f1f1f1;\n  cursor: pointer;\n}\n\n.btn-menu {\n  display: none;\n  position: absolute;\n  right: 10px;\n  top: 7px;\n  color: #000;\n  font-size: 18px;\n}\n\n.logo {\n  height: 50px;\n  width: 50px;\n  margin-right: 40px;\n  margin-left: 20px;\n  margin-top: -10px;\n  margin-bottom: -20px;\n}\n\n.logomovil {\n  height: 0px;\n  width: 0px;\n  visibility: hidden;\n}\n\n.leftmenu {\n  width: 100%;\n  display: flex;\n}\n\n.rightmenu {\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n}\n\n@media screen and (max-width: 900px) {\n  nav {\n    position: fixed;\n    width: 100%;\n    margin-top: 0px;\n    background: #191919;\n    border-bottom: 4px solid #4FFF00;\n  }\n\n  .list {\n    flex-direction: column;\n    margin-left: auto;\n    margin-right: auto;\n    height: auto;\n    padding: 0;\n  }\n\n  .leftmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .rightmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .logo {\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 10px;\n    width: 0px;\n    height: 0px;\n    display: block;\n    justify-content: center;\n    visibility: hidden;\n  }\n\n  .logomovil {\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    height: 50px;\n    width: 50px;\n    display: block;\n    justify-content: center;\n    visibility: visible;\n  }\n\n  .enlace-menu {\n    width: 100%;\n    text-align: center;\n    border-top: 1px solid rgba(255, 255, 255, 0.555);\n    padding: 15px 0;\n  }\n\n  .btn-menu {\n    display: block;\n    border: none;\n    margin-top: 17px;\n    background-color: transparent;\n    color: #f1f1f1;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

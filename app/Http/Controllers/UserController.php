@@ -6,6 +6,7 @@ use App\Http\Requests\User\StoreRequest;
 use App\Http\Requests\User\UpdateRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 
@@ -44,11 +45,11 @@ class UserController extends Controller
         //Almacenar avatar
         if ($request->hasFile('avatar')) {
             //Obtiene los valores del archivo
-            $file= $request->file('avatar');
+            $file = $request->file('avatar');
             //Asigna un nombre aleatorio con la fecha de creación
-            $filename= time().'.'.$file->extension();
+            $filename = time() . '.' . $file->extension();
             //Almacena el avatar en la carpeta users en /public/img/users
-            $file-> move(public_path('img\\users'), $filename);
+            $file->move(public_path('img\\users'), $filename);
             //Actualiza la información del avatar
             $user->update(['avatar' => $filename]);
         }
@@ -85,16 +86,16 @@ class UserController extends Controller
         if ($request->hasFile('avatar')) {
             $currentAvatar = $user->avatar;
             //Obtiene los valores del archivo
-            $file= $request->file('avatar');
+            $file = $request->file('avatar');
             //Asigna un nombre aleatorio con la fecha de creación
-            $filename= time().'.'.$file->extension();
+            $filename = time() . '.' . $file->extension();
             //Almacena el avatar en la carpeta users en /public/img/users
-            $file-> move(public_path('img\\users'), $filename);
+            $file->move(public_path('img\\users'), $filename);
             //Actualiza la información del avatar
             $user->update(['avatar' => $filename]);
             // Valida si existe imagen anterior y la elimina
             if ($currentAvatar != '') {
-                unlink(public_path('img\\users\\'.$currentAvatar));
+                unlink(public_path('img\\users\\' . $currentAvatar));
             }
         }
         return redirect()->route('users.index')->with('success', 'Se actualizó correctamente');
@@ -108,11 +109,31 @@ class UserController extends Controller
         // Valida si hay un valor en db
         if ($currentAvatar != '') {
             // Valida si existe el archivo en la carpeta
-            if (file_exists(public_path('img\\users\\'.$currentAvatar))) {
+            if (file_exists(public_path('img\\users\\' . $currentAvatar))) {
                 // Elimina el archivo de la carpeta
-                unlink(public_path('img\\users\\'.$currentAvatar));
+                unlink(public_path('img\\users\\' . $currentAvatar));
             }
         }
         return redirect()->route('users.index')->with('success', 'Se eliminó correctamente');
     }
+
+    // function login(Request $request)
+    // {
+    //     $email =  $request->email;
+    //     $password = $request->password;
+
+    //     $user = DB::table('users')->where('email', $email)->first();
+    //     if (Hash::check($password, $user->password)) {
+    //         return response()->json([
+    //             'status' => 1,
+    //             'data' => $user,
+    //             'message' => 'Success'
+    //         ]);
+    //     } else {
+    //         return response()->json([
+    //             'status' => 0,
+    //             'message' => 'Error',
+    //         ]);
+    //     }
+    // }
 }

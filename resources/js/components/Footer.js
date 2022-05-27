@@ -7,24 +7,24 @@ import logo from'../../img/recursos/logo.png';
 
 function Footer() {
     return (
-        <footer class="footer-general">
+        <footer className='footer-general'>
 
-			<div class="footer-izq">
+			<div className='footer-izq'>
                 <img className='fegam' src={fegam}></img>
 			</div>
 
-			<div class="footer-cntr">
+			<div className='footer-cntr'>
                 <img className='logofooter' src={logo}></img>
 			</div>
-			<div class="footer-der">
+			<div className='footer-der'>
                 <a className='enlaces-footer' href="#">POLÍTICA DE PRIVACIDAD</a>
                 <a className='enlaces-footer' href="#">AVISO LEGAL</a>
                 <a className='enlaces-footer' href="#">POLÍTICA DE COOKIES</a>
-				<div class="footer-icons">
-                    <p class="footer-links">
-					    <a className='iconos' href="https://www.facebook.com/groups/1859832864245482/"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a className='iconos' href="https://www.instagram.com/motoclubcadizruteando/"><i class="fa-brands fa-instagram"></i></a>
-                        <a className='iconos' href="https://www.youtube.com/channel/UCQAGBKaZ7z2fDE-9z8CKtTw"><i class="fa-brands fa-youtube"></i></a>
+				<div className='footer-icons'>
+                    <p className='footer-links'>
+					    <a className='iconos' href="https://www.facebook.com/groups/1859832864245482/"><i className='fa-brands fa-facebook-f'></i></a>
+                        <a className='iconos' href="https://www.instagram.com/motoclubcadizruteando/"><i className='fa-brands fa-instagram'></i></a>
+                        <a className='iconos' href="https://www.youtube.com/channel/UCQAGBKaZ7z2fDE-9z8CKtTw"><i className='fa-brands fa-youtube'></i></a>
 				    </p>
 				</div>
 			</div>

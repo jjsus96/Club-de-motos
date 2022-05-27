@@ -59,7 +59,7 @@ function Menu() {
                 </ul>
             )}
 
-            <button onClick={toggleNav} className="btn"><i class="fa-solid fa-bars"></i></button>
+            <button onClick={toggleNav} className="btn-menu"><i className='fa-solid fa-bars'></i></button>
         </nav>
     );
 }
