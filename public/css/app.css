@@ -3,6 +3,8 @@ body{
     color: #f1f1f1;
 }
 
+/*---------------------------------------------/Formularios/---------------------------------------------*/
+
 .container {
     padding: 2px 16px;
 }
@@ -81,6 +83,48 @@ form {
     font-size: 15px;
 }
 
+/*---------------------------------------------/Página principal/---------------------------------------------*/
+
+.titulo-inicio{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.imagen-inicio{
+    width: 100%;
+    border:1px solid #4FFF00;
+}
+
+.contenedorinicio-izq{
+    width:39%;
+    float:left;
+    height: 150px;
+    margin-left: 10%;
+}
+.contenedorinicio-der{
+  width:39%;
+  height: 150px;
+  float:right;
+  margin-right: 10%;
+
+}
+/*---------------------------------------------/Socios/---------------------------------------------*/
+.card-grid-socio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-socio{
+    align-content: center;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
 @media (max-width: 900px) {
 
     .formulario-login {
@@ -94,5 +138,26 @@ form {
         margin-right: 10%;
 
     }
+
+
+
+
+
+    .contenedorinicio-izq{
+        width:90%;
+        float: left;
+        margin-right: 5%;
+        margin-left: 5%;
+        height: 100%;
+    }
+    .contenedorinicio-der{
+        width:90%;
+        float:left;
+        margin-right: 5%;
+        margin-left: 5%;
+
+    }
+
+
 
 }

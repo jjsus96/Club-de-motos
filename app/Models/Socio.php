@@ -10,7 +10,7 @@ class Socio extends Model
     use HasFactory;
 
     protected $table = "socios";
-    protected $fillable = ['usuario_id', 'nombre_socio', 'apellidos', 'fecha_nacimiento', 'telefono' , 'direccion', 'padrino', 'motocicleta', 'foto_carnet'];
+    protected $fillable = ['usuario_id', 'nombre_socio', 'apellidos', 'fecha_nacimiento', 'telefono' , 'direccion', 'padrino', 'motocicleta', 'foto_carnet', 'estado'];
     protected $hidden = ['id'];
 
     public function obtenerSocios()

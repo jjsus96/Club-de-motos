@@ -1,11 +1,10 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="el-cuerpo">
+                <div>
                     <h1 class="titulo-inicio">¡Bienvenido!</h1>
                     <div class="contenedorinicio-izq">
                         <img class="imagen-inicio" src="./../images/Club.jpg">
@@ -20,4 +19,4 @@
         </div>
     </div>
 </div>
-@endsection // donde colocaste el div para react?
+@endsection

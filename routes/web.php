@@ -25,7 +25,7 @@ Route::get('/', function () { return view('welcome'); });
 Route::get('/club', function () { return view('club'); });
 Route::get('/evento', function () { return view('evento'); });
 Route::get('/galeria', function () { return view('galeria'); });
-Route::get('/socio', function () { return view('socio'); });
+Route::get('/socio', [SocioController::class, 'vistaSocio'])->name('socio');
 Route::get('/unete', function () { return view('unete'); });
 
 Auth::routes();
@@ -55,6 +55,7 @@ Route::group(['middleware' => ['permission:patrocinadores.lista']], function () 
 // Socios
 Route::group(['middleware' => ['permission:socios.lista']], function () {
     Route::resource('socios', SocioController::class)->names('socios');
+    Route::post('socios/estado/{id}', [SocioController::class, 'estado'])->name('socios.estado');
 });
 
 // Users

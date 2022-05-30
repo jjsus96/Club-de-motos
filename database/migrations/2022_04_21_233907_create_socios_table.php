@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('padrino');
             $table->string('motocicleta');
             $table->string('foto_carnet')->nullable();
+            $table->enum('estado', ['activo', 'inactivo'])->default('inactivo');
 
             $table->timestamps();
         });

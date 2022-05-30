@@ -15,6 +15,7 @@ Socios | {{ env('APP_NAME') }}
             <th>Padrino</th>
             <th>Motocicleta</th>
             <th>Foto de carnet</th>
+            <th>Estado</th>
             <th>Acciones</th>
         </tr>
         @foreach ($socios as $socio)
@@ -28,6 +29,17 @@ Socios | {{ env('APP_NAME') }}
                 <td>{{ $socio->padrino }}</td>
                 <td>{{ $socio->motocicleta }}</td>
                 <td>{{ $socio->foto_carnet }}</td>
+                <td>
+                    <div>
+                        {!! Form::open(['route'=>['socios.estado', $socio->id], 'method'=>'POST']) !!}
+                        @if ($socio->estado == 'activo')
+                        <button type="submit" id="estado" class="btn btn-danger">Desactivar</button>
+                        @else
+                        <button type="submit" id="estado" class="btn btn-">Activar</button>
+                        @endif
+                        {!! Form::close() !!}
+                    </div>
+                </td>
                 <td>
                     <a href="{{ route('socios.show', $socio->id) }}">Ver</a>
                     <a href="{{ route('socios.edit', $socio->id) }}">Editar</a>

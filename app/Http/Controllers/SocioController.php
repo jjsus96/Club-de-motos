@@ -7,6 +7,7 @@ use App\Http\Requests\Socio\UpdateRequest;
 use Illuminate\Http\Request;
 use App\Models\Socio;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class SocioController extends Controller
 {
@@ -112,5 +113,30 @@ class SocioController extends Controller
             }
         }
         return redirect()->route('socios.index')->with('success', 'Se eliminó correctamente');
+    }
+
+    public function vistaSocio()
+    {
+        return view('socio');
+    }
+
+    public function datosSocio()
+    {
+        $socios = DB::table('socios')
+        ->select('id', 'nombre_socio', 'foto_carnet')
+        ->where('estado', '=', 'activo')
+        ->get();
+        return $socios;
+    }
+
+    public function estado(Request $request, $id)
+    {
+        $socio = Socio::find($id);
+        //dd($socio);
+        $socio->update([
+            'estado' => $socio->estado == 'inactivo' ? 'activo' : 'inactivo'
+        ]);
+        //dd($socio);
+        return redirect()->route('socios.index')->with('success', 'Se Activo/Desactivo el socio!');
     }
 }
