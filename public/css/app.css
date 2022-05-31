@@ -1,6 +1,17 @@
-body{
-    background-color: #313131 ;
+body {
+    background-color: #313131;
     color: #f1f1f1;
+}
+
+main {
+    min-height: 85vh;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /*---------------------------------------------/Formularios/---------------------------------------------*/
@@ -28,7 +39,7 @@ input {
     box-sizing: border-box;
     border: 1px solid #4FFF00;
     color: #525c66;
-  }
+}
 
 
 
@@ -40,29 +51,29 @@ form {
 
 .form-check {
     position: relative;
-  }
+}
 
-  .form-check-input {
+.form-check-input {
     position: absolute;
     margin-top: 0.3rem;
     margin-left: 10px;
-  }
+}
 
-  .form-check-input[disabled] ~ .form-check-label,
-  .form-check-input:disabled ~ .form-check-label {
+.form-check-input[disabled]~.form-check-label,
+.form-check-input:disabled~.form-check-label {
     color: #6c757d;
-  }
+}
 
-  .form-check-label {
+.form-check-label {
     margin-bottom: 0;
-  }
+}
 
-  .titulo-formulario {
+.titulo-formulario {
     text-align: center;
     margin-top: -30px;
-  }
+}
 
-  .btn-form{
+.btn-form {
     border: 1px solid #4FFF00;
     display: inline-block;
     width: 200px;
@@ -85,50 +96,81 @@ form {
 
 /*---------------------------------------------/Página principal/---------------------------------------------*/
 
-.titulo-inicio{
+.titulo-inicio {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 50px;
-}
-
-.imagen-inicio{
     width: 100%;
-    border:1px solid #4FFF00;
 }
 
-.contenedorinicio-izq{
-    width:39%;
-    float:left;
-    height: 150px;
-    margin-left: 10%;
+.imagen-inicio {
+    width: 100%;
+    border: 1px solid #4FFF00;
 }
-.contenedorinicio-der{
-  width:39%;
-  height: 150px;
-  float:right;
-  margin-right: 10%;
 
+.contenedorinicio-izq {
+    width: 45%;
+    padding: 1%;
 }
+
+.contenedorinicio-der {
+    width: 45%;
+}
+
 /*---------------------------------------------/Socios/---------------------------------------------*/
+
 .card-grid-socio {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.card-socio{
-    align-content: center;
-    border: 1px solid gray;
+.card-socio {
+    width: 170px;
+    height: 250px;
+    border: 1px solid #4FFF00;
+    background-color: #191919;
     border-radius: 6px;
-    margin-bottom: 10px;
-    margin-right: 10px;
     overflow: hidden;
+    text-align: center;
+    margin: 5px;
 }
+
+.img-socio {
+    width: 100%;
+    height: 80%;
+    border-bottom: 1px solid #4FFF00;
+}
+
+.nombre-socio{
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/*---------------------------------------------/Responsive Para evitar descuadres/---------------------------------------------*/
+
+@media (max-width: 1400px) {
+
+    .contenedorinicio-izq {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contenedorinicio-der {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+/*---------------------------------------------/Responsive para movil/---------------------------------------------*/
 
 @media (max-width: 900px) {
 
     .formulario-login {
-        margin-top:100px ;
+        margin-top: 100px;
         margin-bottom: 100px;
         display: flex;
         justify-content: center;
@@ -138,26 +180,5 @@ form {
         margin-right: 10%;
 
     }
-
-
-
-
-
-    .contenedorinicio-izq{
-        width:90%;
-        float: left;
-        margin-right: 5%;
-        margin-left: 5%;
-        height: 100%;
-    }
-    .contenedorinicio-der{
-        width:90%;
-        float:left;
-        margin-right: 5%;
-        margin-left: 5%;
-
-    }
-
-
 
 }

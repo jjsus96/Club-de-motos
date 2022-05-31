@@ -28,15 +28,15 @@
         </header>
 
 
-        <section>
+        <main>
 
             @yield('content')
 
-        </section>
+        </main>
 
         <footer>
 
-            {{-- <div id="footer"></div> --}}
+            <div id="footer"></div>
 
         </footer>
     </body>

@@ -33,8 +33,8 @@ function Socios() {
         <div className="card-grid-socio">
             {socios.map((socio) => (
                 <div key={socio.id} className="card-socio">
-                    <img src={`img/socios/${socio.foto_carnet}`} alt={socio.nombre_socio} />
-                    <p>{socio.nombre_socio}</p>
+                    <img className='img-socio' src={`img/socios/${socio.foto_carnet}`} alt={socio.nombre_socio} />
+                    <p className='nombre-socio'>{socio.nombre_socio}</p>
                 </div>
             ))}
         </div>

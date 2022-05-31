@@ -1,14 +1,3 @@
-/*Mantener el footer abajo*/
-footer{
-	position: fixed;
-	bottom: 0;
-}
-
-@media (max-height:800px){
-	footer { position: static; }
-	header { padding-top:40px; }
-}
-
 //general
 
 .footer-general{
@@ -105,12 +94,6 @@ footer{
 
 
 @media (max-width: 900px) {
-
-    footer{
-        position: relative;
-        bottom: 0;
-        margin-top: auto;
-    }
 
 	.footer-general .footer-izq,
 	.footer-general .footer-cntr,
