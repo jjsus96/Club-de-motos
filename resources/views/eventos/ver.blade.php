@@ -1,54 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <tittle>Laravel<tittle/>
-        <br>
-        <style>
-            body {
-                margin: auto;
-                padding: 50px;
-            }
-            input[type=text], select {
-                width: 100%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                display: inline-block;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-            }
-            input[type=submit] {
-                width: 100%;
-                background-color: #4CAF50;
-                color: white;
-                padding: 14px 20px;
-                margin: 8px 0;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-            div {
-                border-radius: 5px;
-                background-color: #f2f2f2;
-                padding: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <a href="/socios">Ver listado de Eventos</a>
-        <br>
-        <h2>Ver Eventos</h2>
-        <div>
-            <td>{{ $evento->nombre_evento }}</td>
-            <td>{{ $evento->cartel }}</td>
-            <td>{{ $evento->fecha_inicio }}</td>
-            <td>{{ $evento->descripcion }}</td>
-            <td>{{ $evento->colaborador_id }}</td>
-            <td>{{ $evento->patrocinador_id }}</td>
+@extends('layouts.app')
+@section('title')
+    Eventos | {{ env('APP_NAME') }}
+@endsection
+@section('content')
+    <section>
+        <div class="contenedor-tablas">
+            <h1 class="titulo-inicio">Eventos</h1>
+            <a href="/eventos">Ver listado de Eventos</a>
+            <div class="ficha-administracion">
+                <div>
+                    <p>Nombre:{{ $evento->nombre_evento }}</p>
+                    <p>Cartel: {{ $evento->cartel }}</p>
+                    <p>Fecha Inicio: {{ $evento->fecha_inicio }}</p>
+                    <p>Descripción: {{ $evento->descripcion }}</p>
+                    <p>Colaborador: {{ $evento->colaborador_id }}</p>
+                    <p>Patrocinador: {{ $evento->patrocinador_id }}</p>
+                </div>
+            </div>
         </div>
-    </body>
-<html>
+    </section>
+@endsection

@@ -12,7 +12,7 @@
                     <tr>
                         <th>Usuario</th>
                         <th>Nombre</th>
-                        <th>Apelliods</th>
+                        <th>Apellidos</th>
                         <th>Fecha de nacimiento</th>
                         <th>Teléfono</th>
                         <th>Dirección</th>

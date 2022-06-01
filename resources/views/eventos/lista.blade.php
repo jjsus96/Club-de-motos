@@ -27,10 +27,10 @@
                             <td>{{ $evento->colaborador->nombre_colaborador }}</td>
                             <td>{{ $evento->patrocinador->nombre_patrocinador }}</td>
                             <td>
-                                <a href="{{ route('eventos.show', $evento->id) }}">Ver</a>
-                                <a href="{{ route('eventos.edit', $evento->id) }}">Editar</a>
+                                <button class="btn-general-administracion"><a href="{{ route('eventos.show', $evento->id) }}">Ver</a></button>
+                                <button class="btn-general-administracion"><a href="{{ route('eventos.edit', $evento->id) }}">Editar</a></button>
                                 {{ Form::open(['url' => route('eventos.destroy', $evento), 'method' => 'delete']) }}
-                                <button type="submit" onclick="return eliminarEvento('Eliminar Evento')"> Eliminar</button>
+                                <button class="btn-general-administracion-eliminar" type="submit" onclick="return eliminarEvento('Eliminar Evento')"> Eliminar</button>
                                 {!! Form::close() !!}
                             </td>
                         </tr>

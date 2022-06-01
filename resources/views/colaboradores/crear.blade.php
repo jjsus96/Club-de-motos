@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Socios | {{ env('APP_NAME') }}
+    Colaboradores | {{ env('APP_NAME') }}
 @endsection
 @section('content')
     <section>
