@@ -42,12 +42,6 @@ input, select{
     display: block;
 }
 
-form {
-    margin-top: 50px;
-    margin-bottom: 50px;
-
-}
-
 .form-check {
     position: relative;
 }
@@ -69,7 +63,6 @@ form {
 
 .titulo-formulario {
     text-align: center;
-    margin-top: -30px;
     width: 100%;
 }
 
@@ -135,25 +128,83 @@ file{
 /*---------------------------------------------/Vista general Administración/---------------------------------------------*/
 
 .contenedor-tablas{
-    margin-top: 100px;
     margin-bottom: 50px;
+    width: 100%;
+    overflow: auto;
+
 }
 
 table {
     border-collapse: collapse;
-    border: 1px #4FFF00 solid;
+    border: 2px #4FFF00 solid;
     text-align: center;
     background-color: #191919;
+    margin: 0 auto;
 }
 
 th {
     border-collapse: collapse;
-    border: 1px #4FFF00 solid;
+    border-bottom: 1px #4FFF00 solid;
 }
 
 td {
     border-collapse: collapse;
-    border: 1px #4FFF00 solid;
+    border: 1px #f1f1f1 solid;
+}
+
+.btn-general-administracion-activo{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 100px ;
+    height: 35px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Nunito;
+    cursor: pointer;
+}
+
+.btn-general-administracion-inactivo{
+    background-color: #FF5733;
+    border: none;
+    color: white;
+    width: 100px ;
+    height: 35px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Nunito;
+    cursor: pointer;
+}
+
+.btn-general-administracion{
+    background-color: #00bbff;
+    border: none;
+    color: white;
+    width: 100px ;
+    height: 35px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-family: Nunito;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+
+.btn-general-administracion-eliminar{
+    background-color: #FF0000;
+    border: none;
+    color: white;
+    width: 100px ;
+    height: 35px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Nunito;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 /*---------------------------------------------/Página principal/---------------------------------------------*/
@@ -223,6 +274,13 @@ td {
         width: 100%;
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    table {
+        border-collapse: collapse;
+        border: 2px #4FFF00 solid;
+        background-color: #191919;
+        margin: 0 auto;
     }
 
 }
