@@ -14,7 +14,7 @@ section {
     align-items: center;
 }
 
-/*---------------------------------------------/Formularios/---------------------------------------------*/
+/*---------------------------------------------/Formularios Acceso/---------------------------------------------*/
 
 .container {
     padding: 2px 16px;
@@ -31,17 +31,16 @@ section {
     border: 2px solid #4FFF00;
 }
 
-input {
+input, select{
     margin-bottom: 10px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Nunito", sans-serif;
     width: 200px;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #4FFF00;
     color: #525c66;
+    display: block;
 }
-
-
 
 form {
     margin-top: 50px;
@@ -71,6 +70,7 @@ form {
 .titulo-formulario {
     text-align: center;
     margin-top: -30px;
+    width: 100%;
 }
 
 .btn-form {
@@ -92,6 +92,68 @@ form {
 .invalid-feedback {
     color: red;
     font-size: 15px;
+}
+
+/*---------------------------------------------/Formularios Administración/---------------------------------------------*/
+
+.formulario-administracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid #4FFF00;
+    margin-bottom: 50px;
+}
+
+.contenedor-administracion {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.enlace-administracion{
+    margin-left: 50px;
+}
+
+label{
+    display: block;
+}
+
+file{
+    display: block;
+}
+
+.btn-form-administracion{
+    color: #f1f1f1;
+    background-color: #4CAF50;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*---------------------------------------------/Vista general Administración/---------------------------------------------*/
+
+.contenedor-tablas{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px #4FFF00 solid;
+    text-align: center;
+    background-color: #191919;
+}
+
+th {
+    border-collapse: collapse;
+    border: 1px #4FFF00 solid;
+}
+
+td {
+    border-collapse: collapse;
+    border: 1px #4FFF00 solid;
 }
 
 /*---------------------------------------------/Página principal/---------------------------------------------*/
@@ -179,6 +241,17 @@ form {
         margin-left: 10%;
         margin-right: 10%;
 
+    }
+
+    .formulario-administracion {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #191919;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
 }

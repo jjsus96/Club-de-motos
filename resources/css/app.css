@@ -14,7 +14,7 @@ section {
     align-items: center;
 }
 
-/*---------------------------------------------/Formularios/---------------------------------------------*/
+/*---------------------------------------------/Formularios Acceso/---------------------------------------------*/
 
 .container {
     padding: 2px 16px;
@@ -93,6 +93,21 @@ form {
     color: red;
     font-size: 15px;
 }
+
+/*---------------------------------------------/Formularios Administración/---------------------------------------------*/
+
+.formulario-administracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    margin-top: 150px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid #4FFF00;
+}
+
+
 
 /*---------------------------------------------/Página principal/---------------------------------------------*/
 
