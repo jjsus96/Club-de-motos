@@ -7,6 +7,7 @@ use App\Http\Requests\Galerias\UpdateRequest;
 use App\Models\Evento;
 use Illuminate\Http\Request;
 use App\Models\Galeria;
+use Illuminate\Support\Facades\DB;
 
 class GaleriaController extends Controller
 {
@@ -95,5 +96,14 @@ class GaleriaController extends Controller
             }
         }
         return redirect()->route('galerias.index')->with('success', 'Se eliminó correctamente');
+    }
+
+    public function datosGaleria()
+    {
+        $galerias = DB::table('galeria')
+        ->join('eventos', 'galeria.evento_id', '=', 'eventos.id')
+        ->select('galeria.id','galeria.imagen','eventos.nombre_evento')
+        ->get();
+        return $galerias;
     }
 }

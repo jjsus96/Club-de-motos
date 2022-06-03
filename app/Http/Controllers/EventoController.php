@@ -6,6 +6,7 @@ use App\Models\Colaborador;
 use Illuminate\Http\Request;
 use App\Models\Evento;
 use App\Models\Patrocinador;
+use Illuminate\Support\Facades\DB;
 
 class EventoController extends Controller
 {
@@ -108,5 +109,18 @@ class EventoController extends Controller
             }
         }
         return redirect()->route('eventos.index')->with('success', 'Se eliminó correctamente');
+    }
+
+    public function datosEvento()
+    {
+        // $eventos = Evento::all()->toArray();
+        // return $eventos;
+
+        $eventos = DB::table('eventos')
+            ->join('colaboradores', 'eventos.colaborador_id', '=', 'colaboradores.id')
+            ->join('patrocinadores', 'eventos.patrocinador_id', '=', 'patrocinadores.id')
+            ->select('eventos.id', 'eventos.nombre_evento','eventos.cartel' ,'eventos.fecha_inicio','eventos.descripcion','colaboradores.nombre_colaborador', 'patrocinadores.nombre_patrocinador')
+            ->get();
+            return $eventos;
     }
 }

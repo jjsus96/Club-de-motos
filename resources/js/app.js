@@ -17,3 +17,11 @@ require('./components/Footer');
 /** Socios */
 
 require('./components/Socios');
+
+/** Eventos */
+
+require('./components/Eventos');
+
+/** Eventos */
+
+require('./components/Galerias');

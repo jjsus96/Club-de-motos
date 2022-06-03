@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\EventoController;
+use App\Http\Controllers\GaleriaController;
 use App\Http\Controllers\SocioController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -14,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/socios', [SocioController::class, 'datosSocio']);
+Route::get('/galerias', [GaleriaController::class, 'datosGaleria']);
+Route::get('/eventos', [EventoController::class, 'datosEvento']);

@@ -15,6 +15,6 @@
             <p>Así que no lo dudes, si quieres conocernos ven a nuestra sede y sal a rodar junto a nosotros o a disfrutar de
                 las comidas y eventos que organizamos para seguir dándonos a conocer, y que cada vez más personas puedan
                 unirse a nuestra familia motera</p>
-        </div>
+            </div>
 </section>
 @endsection
