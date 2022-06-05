@@ -113,14 +113,11 @@ class EventoController extends Controller
 
     public function datosEvento()
     {
-        // $eventos = Evento::all()->toArray();
-        // return $eventos;
-
         $eventos = DB::table('eventos')
             ->join('colaboradores', 'eventos.colaborador_id', '=', 'colaboradores.id')
             ->join('patrocinadores', 'eventos.patrocinador_id', '=', 'patrocinadores.id')
             ->select('eventos.id', 'eventos.nombre_evento','eventos.cartel' ,'eventos.fecha_inicio','eventos.descripcion','colaboradores.nombre_colaborador', 'patrocinadores.nombre_patrocinador')
-            ->get();
+            ->orderBy('id', 'DESC')->get();
             return $eventos;
     }
 }
