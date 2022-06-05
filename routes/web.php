@@ -27,6 +27,11 @@ Route::get('/evento', function () { return view('evento'); });
 Route::get('/galeria', function () { return view('galeria'); });
 Route::get('/socio', [SocioController::class, 'vistaSocio'])->name('socio');
 Route::get('/unete', function () { return view('unete'); });
+Route::get('/legal', function () { return view('legal'); });
+Route::get('/privacidad', function () { return view('privacidad'); });
+Route::get('/cookie', function () { return view('cookie'); });
+Route::get('/administrador', function () { return view('administrador'); });
+Route::get('/usuario', function () { return view('usuario'); });
 
 Auth::routes();
 

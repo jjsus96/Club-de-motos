@@ -30,15 +30,24 @@ function Eventos() {
 
     return (
 
-        <div className="card-grid-socio">
+        <div className="card-grid-evento">
             {eventos.map((evento) => (
-                <div key={evento.id} className="card-socio">
-                    <h2 className='nombre-socio'>{evento.nombre_evento}</h2>
-                    <img className='img-socio' src={`img/eventos/${evento.cartel}`} alt={evento.nombre_evento} />
-                    <p className='nombre-socio'>{evento.fecha_inicio}</p>
-                    <p className='nombre-socio'>{evento.nombre_colaborador}</p>
-                    <p className='nombre-socio'>{evento.nombre_patrocinador}</p>
-                    <p className='nombre-socio'>{evento.descripcion}</p>
+                <div key={evento.id} className="card-evento">
+                    <div className='evento-superior'>
+                        <p className='nombre-evento'><b>-{evento.nombre_evento}-</b></p>
+                    </div>
+
+                    <div className='evento-izq'>
+                        <img className='img-evento' src={`img/eventos/${evento.cartel}`} alt={evento.nombre_evento} />
+                    </div>
+                    <div className='evento-der'>
+                        <p className='dato-evento'><b>Fecha:</b> <br></br>{evento.fecha_inicio}</p>
+                        <p className='dato-evento'><b>Colaborador:</b> <br></br>{evento.nombre_colaborador}</p>
+                        <p className='dato-evento'><b>Patrocinador:</b> <br></br>{evento.nombre_patrocinador}</p>
+                    </div>
+                    <div className='descripcion-evento'>
+                        <p className='dato-evento'>{evento.descripcion}</p>
+                    </div>
                 </div>
             ))}
         </div>

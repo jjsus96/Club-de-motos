@@ -17,9 +17,9 @@ function Footer() {
                 <img className='logofooter' src={logo}></img>
 			</div>
 			<div className='footer-der'>
-                <a className='enlaces-footer' href="#">POLÍTICA DE PRIVACIDAD</a>
-                <a className='enlaces-footer' href="#">AVISO LEGAL</a>
-                <a className='enlaces-footer' href="#">POLÍTICA DE COOKIES</a>
+                <a className='enlaces-footer' href="/privacidad">POLÍTICA DE PRIVACIDAD</a>
+                <a className='enlaces-footer' href="/legal">AVISO LEGAL</a>
+                <a className='enlaces-footer' href="/cookie">POLÍTICA DE COOKIES</a>
 				<div className='footer-icons'>
                     <p className='footer-links'>
 					    <a className='iconos' href="https://www.facebook.com/groups/1859832864245482/"><i className='fa-brands fa-facebook-f'></i></a>

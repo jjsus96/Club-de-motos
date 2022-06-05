@@ -75,7 +75,7 @@ input, select{
     font-size: 24px;
     cursor: pointer;
     color: #f1f1f1;
-    background-color: #4CAF50;
+    background-color: #206622;
     text-align: center;
     display: block;
     margin-top: 10px;
@@ -192,7 +192,7 @@ td {
 }
 
 .btn-general-administracion{
-    background-color: #00bbff;
+    background-color: #004b66;
     border: none;
     color: white;
     width: 100px ;
@@ -283,6 +283,140 @@ td {
 .nombre-socio{
     margin-top: 5px;
     text-transform: uppercase;
+}
+
+/*---------------------------------------------/Galerías/---------------------------------------------*/
+
+.contenedor-galeria{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+
+  @media all and (min-width: 320px) {
+    .grid-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    .grid-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media all and (min-width: 1024px) {
+    .grid-gallery {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .grid-gallery__item:nth-child(11n+1) {
+    grid-column: span 1;
+  }
+
+  .grid-gallery__item:nth-child(11n+4) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .grid-gallery__item:nth-child(11n+6) {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+
+  .grid-gallery__item:nth-child(11n+7) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .grid-gallery__item:nth-child(11n+8) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .grid-gallery__item:nth-child(11n+9) {
+    grid-row: span 3;
+  }
+
+  .grid-gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #4FFF00;
+  }
+
+
+/*---------------------------------------------/Eventos/---------------------------------------------*/
+
+.card-grid-evento {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.card-evento {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #4FFF00;
+    background-color: #191919;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    margin: 5px;
+}
+
+.evento-superior{
+    height: 20px;
+    width: 100%;
+}
+
+.evento-izq{
+    width: 49%;
+    padding: 2%;
+    margin-top: 25px;
+}
+
+.evento-der{
+    width: 49%;
+    text-align: left;
+    padding: 1%;
+    margin-top: 35px;
+}
+
+.img-evento {
+    width: 140px;
+    height: 200px;
+}
+
+.nombre-evento{
+    margin-top: 25px;
+    width: 100%;
+    font-size: 25px;
+}
+
+.dato-evento{
+    margin-top: 0px;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 12px;
+}
+
+.descripcion-evento{
+    width: 100%;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 /*---------------------------------------------/Responsive Para evitar descuadres/---------------------------------------------*/

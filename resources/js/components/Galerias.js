@@ -30,10 +30,10 @@ function Galerias() {
 
     return (
 
-        <div className="card-grid-socio">
+        <div className="grid-gallery">
             {galerias.map((galeria) => (
-                <div key={galeria.id} className="card-socio">
-                    <img className='img-socio' src={`img/galerias/${galeria.imagen}`} alt={galeria.id} />
+                <div key={galeria.id} className="grid-gallery__item">
+                    <img className='grid-gallery__image' src={`img/galerias/${galeria.imagen}`} alt={galeria.id} />
                 </div>
             ))}
         </div>

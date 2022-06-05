@@ -2,7 +2,9 @@
 
 @section('content')
     <section>
-        <h1 class="titulo-inicio">Galería</h1>
-        <div id="galerias"></div>
-</section>
+        <div class="contenedor-galeria">
+            <h1 class="titulo-inicio">Galería</h1>
+            <div id="galerias"></div>
+        </div>
+    </section>
 @endsection
