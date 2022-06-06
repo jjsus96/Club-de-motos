@@ -10,6 +10,18 @@ require('./components/Example');
 
 require('./components/Menu');
 
+/** Menú de navegación */
+
+require('./components/Menuadministrador');
+
+/** Menú de navegación */
+
+require('./components/Menusocio');
+
+/** Menú de navegación */
+
+require('./components/Menuusuario');
+
 /** Footer */
 
 require('./components/Footer');
@@ -22,6 +34,6 @@ require('./components/Socios');
 
 require('./components/Eventos');
 
-/** Eventos */
+/** Galerías */
 
 require('./components/Galerias');

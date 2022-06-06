@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 
-function Menu() {
+function Menuadministrador() {
 
     // Define el estado del menú a falso para que por defecto no muestre el desplegable.
 
@@ -63,8 +63,8 @@ function Menu() {
     );
 }
 
-export default Menu;
+export default Menuadministrador;
 
-if (document.getElementById('menu')) {
-    ReactDOM.render(<Menu />, document.getElementById('menu'));
+if (document.getElementById('menuadministrador')) {
+    ReactDOM.render(<Menuadministrador />, document.getElementById('menuadministrador'));
 }
