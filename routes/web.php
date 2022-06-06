@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-Use App\http\Controllers\ColaboradorController;
+use App\Http\Controllers\ColaboradorController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\EventoDetalleController;
 use App\Http\Controllers\GaleriaController;
