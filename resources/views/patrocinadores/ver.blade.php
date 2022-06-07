@@ -6,7 +6,7 @@
     <section>
         <div class="contenedor-tablas">
             <h1 class="titulo-inicio">Patrocinadores</h1>
-            <a href="/patrocinadores">Ver listado de Patrocinadores</a>
+            <a href="{{ route('patrocinadores.index') }}">Ver listado de Patrocinadores</a>
             <div class="ficha-administracion">
                 <div>
                     <p> Nombre Patrocinador: {{ $patrocinador->nombre_patrocinador }}</p>

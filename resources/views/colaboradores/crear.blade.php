@@ -5,7 +5,7 @@
 @section('content')
     <section>
         <div class="contenedor-administracion">
-            <a class="enlace-administracion" href="/colaboradores">Ver listado de colaboradores</a>
+            <a class="enlace-administracion" href="{{ route('colaboradores.index') }}">Ver listado de colaboradores</a>
             <div class="formulario-administracion">
                 {!! Form::open(['route' => ['colaboradores.store'], 'method' => 'POST']) !!}
                 <h1 class="titulo-formulario"> Nuevo Colaborador</h1>

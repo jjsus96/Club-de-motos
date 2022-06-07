@@ -6,7 +6,7 @@
     <section>
         <div class="contenedor-tablas">
             <h1 class="titulo-inicio">Galerías</h1>
-            <a href="/galerias">Ver listado de Galerías</a>
+            <a href="{{ route('galerias.index') }}">Ver listado de Galerías</a>
             <div class="ficha-administracion">
                 <div>
                     <p> Imagen: {{ $galeria->imagen }}</p>

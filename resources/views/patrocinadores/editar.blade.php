@@ -6,7 +6,7 @@
     <section>
         <div class="contenedor-administracion">
 
-            <a class="enlace-administracion" href="/patrocinadores">Ver listado de patrocinadores</a>
+            <a class="enlace-administracion" href="{{ route('patrocinadores.index') }}">Ver listado de patrocinadores</a>
 
                 <div class="formulario-administracion">
             {!! Form::model($patrocinador, ['route'=>['patrocinadores.update',$patrocinador], 'method'=>'PUT']) !!}

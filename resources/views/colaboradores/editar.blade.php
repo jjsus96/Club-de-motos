@@ -5,7 +5,7 @@
 @section('content')
     <section>
         <div class="contenedor-administracion">
-            <a class="enlace-administracion" href="/colaboradores">Ver listado de colaboradores</a>
+            <a class="enlace-administracion" href="{{ route('colaboradores.index') }}">Ver listado de colaboradores</a>
             <div class="formulario-administracion">
                 {!! Form::model($colaborador, ['route' => ['colaboradores.update', $colaborador], 'method' => 'PUT']) !!}
                 <h1 class="titulo-formulario"> Editar Colaborador</h1>

@@ -6,7 +6,7 @@
     <section>
         <div class="contenedor-tablas">
             <h1 class="titulo-inicio">Colaboradores</h1>
-            <a href="/colaboradores">Ver listado de Colaboradores</a>
+            <a href="{{ route('colaboradores.index') }}">Ver listado de Colaboradores</a>
             <div class="ficha-administracion">
                 <div>
                     <p> Nombre Colaborador: {{ $colaborador->nombre_colaborador }}</p>

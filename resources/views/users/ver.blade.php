@@ -6,7 +6,7 @@
     <section>
             <div class="contenedor-tablas">
                 <h1 class="titulo-inicio">Usuarios</h1>
-                <a href="/users">Ver listado de usuarios</a>
+                <a href="{{ route('users.index') }}">Ver listado de usuarios</a>
                 <div class="ficha-administracion">
                     <div>
                         <p> Usuario: {{ $user->name }}</p>

@@ -6,7 +6,7 @@
     <section>
         <div class="contenedor-administracion">
 
-            <a class="enlace-administracion" href="/socios">Ver listado de socios</a>
+            <a class="enlace-administracion" href="{{ route('socios.index') }}">Ver listado de socios</a>
 
             <div class="formulario-administracion">
                 {!! Form::model($socio, ['route' => ['socios.update', $socio], 'method' => 'PUT', 'files' => true]) !!}

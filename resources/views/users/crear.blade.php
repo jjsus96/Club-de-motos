@@ -5,7 +5,7 @@
 @section('content')
 <section>
     <div class="contenedor-administracion">
-        <a class="enlace-administracion" href="/users">Ver listado de usuarios</a>
+        <a class="enlace-administracion" href="{{ route('users.index') }}">Ver listado de usuarios</a>
         <div class="formulario-administracion">
             {!! Form::open(['route'=>['users.store'], 'method' => 'POST', 'files' => true]) !!}
 

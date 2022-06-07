@@ -116,24 +116,4 @@ class UserController extends Controller
         }
         return redirect()->route('users.index')->with('success', 'Se eliminó correctamente');
     }
-
-    // function login(Request $request)
-    // {
-    //     $email =  $request->email;
-    //     $password = $request->password;
-
-    //     $user = DB::table('users')->where('email', $email)->first();
-    //     if (Hash::check($password, $user->password)) {
-    //         return response()->json([
-    //             'status' => 1,
-    //             'data' => $user,
-    //             'message' => 'Success'
-    //         ]);
-    //     } else {
-    //         return response()->json([
-    //             'status' => 0,
-    //             'message' => 'Error',
-    //         ]);
-    //     }
-    // }
 }
