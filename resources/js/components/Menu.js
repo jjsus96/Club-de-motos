@@ -50,7 +50,6 @@ function Menu() {
                         <li className="enlace-menu"><a href="/evento">Eventos</a></li>
                         <li className="enlace-menu"><a href="/galeria">Galería</a></li>
                         <li className="enlace-menu"><a href="/socio">Socios</a></li>
-                        <li className="enlace-menu"><a href="/unete">Únete</a></li>
                     </div>
                     <div className='rightmenu'>
                         <li className="enlace-menu"><a href="/login">Login</a></li>
