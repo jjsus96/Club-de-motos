@@ -56,6 +56,10 @@ __webpack_require__(/*! ./components/Eventos */ "./resources/js/components/Event
 
 
 __webpack_require__(/*! ./components/Galerias */ "./resources/js/components/Galerias.js");
+/** Tiempo */
+
+
+__webpack_require__(/*! ./components/Tiempo */ "./resources/js/components/Tiempo.js");
 
 /***/ }),
 
@@ -721,7 +725,7 @@ function Menuadministrador() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
           className: "enlace-menu",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-            href: "localhost/logout",
+            href: "/home",
             children: "Cuenta"
           })
         })
@@ -858,7 +862,7 @@ function Menusocio() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
           className: "enlace-menu",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-            href: "localhost/logout",
+            href: "/home",
             children: "Cuenta"
           })
         })
@@ -1001,7 +1005,7 @@ function Menuusuario() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
           className: "enlace-menu",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-            href: "localhost/logout",
+            href: "/home",
             children: "Cuenta"
           })
         })
@@ -1137,6 +1141,124 @@ if (document.getElementById('socios')) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Tiempo.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Tiempo.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _sass_tiempo_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sass/tiempo.scss */ "./resources/sass/tiempo.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+ //Llamada a una api que devuelvel los resultados y los muestra por pantalla
+
+
+
+
+function Tiempo() {
+  //Definimos nuestra clave para poder usar la API
+  var apikey = '26820b81e497e01c0449a96f5d932ead'; //Almacena el resultado devuelto por la API
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{}]),
+      _useState2 = _slicedToArray(_useState, 2),
+      tiempoinfo = _useState2[0],
+      settiempo = _useState2[1]; //Almacena el valor introducido en en el input
+
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      ciudad = _useState4[0],
+      setciudad = _useState4[1];
+
+  var gettiempo = function gettiempo(e) {
+    //Al pulsar enter, realiza la petición a la api con los parámetros que le hemos asignado.
+    if (e.key === "Enter") {
+      fetch("https://api.openweathermap.org/data/2.5/weather?q=".concat(ciudad, "&units=metric&APPID=").concat(apikey)).then(function (response) {
+        return response.json();
+      }).then( //Pasa la información y setea de nuevo el valor del input.
+      function (data) {
+        settiempo(data);
+        setciudad("");
+      });
+    }
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    className: "contenedor-tiempo",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+      className: "titulofuncionalidad",
+      id: "clima",
+      children: "\xBFQuieres saber si el tiempo para tu ruta?"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+      className: "subtitulofuncionalidad",
+      children: "EL TIEMPO"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+      className: "definicion",
+      children: "Introduce el nombre de cualquier ciudad para saber sus condiciones meteorol\xF3gicas en este momento."
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+      className: "inputfuncionalidad",
+      placeholder: "Introduzca ciudad y pulse enter",
+      onChange: function onChange(e) {
+        return setciudad(e.target.value);
+      },
+      value: ciudad,
+      onKeyPress: gettiempo
+    }), typeof tiempoinfo.main != "undefined" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "marcotemporal",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        className: "resultado",
+        children: ["Ciudad: ", tiempoinfo.name, "  (", tiempoinfo.sys.country, ")"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        className: "resultado",
+        children: ["Cielo: ", tiempoinfo.weather[0].description]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        className: "resultado",
+        children: ["Temperatura actual: ", tiempoinfo.main.temp, " \xBAC"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        className: "resultado",
+        children: ["Temperatura m\xE1xima: ", tiempoinfo.main.temp_max, " \xBAC"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        className: "resultado",
+        children: ["Temperatura m\xEDnima: ", tiempoinfo.main.temp_min, " \xBAC"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        className: "resultado",
+        children: ["Humedad: ", tiempoinfo.main.humidity, "%"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        className: "resultado",
+        children: ["Viento: ", tiempoinfo.wind.speed, " Km/h"]
+      })]
+    }) : '']
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tiempo);
+
+if (document.getElementById('tiempo')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Tiempo, {}), document.getElementById('tiempo'));
+}
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/@fortawesome/fontawesome-free/css/all.min.css":
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/@fortawesome/fontawesome-free/css/all.min.css ***!
@@ -1230,6 +1352,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "nav {\n  position: fixed;\n  width: 100%;\n  margin-top: -25px;\n  background: #191919;\n  border-bottom: 4px solid #4FFF00;\n  z-index: 100;\n}\n\n.list {\n  list-style-type: none;\n  background: #191919;\n  height: 100%;\n  display: flex;\n  position: relative;\n  padding: 0;\n}\n\n.enlace-menu {\n  margin-right: 20px;\n  font-size: 20px;\n  text-transform: uppercase;\n  color: #f1f1f1;\n  cursor: pointer;\n}\n\n.btn-menu {\n  display: none;\n  position: absolute;\n  right: 10px;\n  top: 7px;\n  color: #000;\n  font-size: 18px;\n}\n\n.logo {\n  height: 50px;\n  width: 50px;\n  margin-right: 40px;\n  margin-left: 20px;\n  margin-top: -10px;\n  margin-bottom: -20px;\n}\n\n.logomovil {\n  height: 0px;\n  width: 0px;\n  visibility: hidden;\n}\n\n.leftmenu {\n  width: 100%;\n  display: flex;\n}\n\n.rightmenu {\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n}\n\n@media screen and (max-width: 900px) {\n  nav {\n    position: fixed;\n    width: 100%;\n    margin-top: 0px;\n    background: #191919;\n    border-bottom: 4px solid #4FFF00;\n  }\n\n  .list {\n    flex-direction: column;\n    margin-left: auto;\n    margin-right: auto;\n    height: auto;\n    padding: 0;\n  }\n\n  .leftmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .rightmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .logo {\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 10px;\n    width: 0px;\n    height: 0px;\n    display: block;\n    justify-content: center;\n    visibility: hidden;\n  }\n\n  .logomovil {\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    height: 50px;\n    width: 50px;\n    display: block;\n    justify-content: center;\n    visibility: visible;\n  }\n\n  .enlace-menu {\n    width: 100%;\n    text-align: center;\n    border-top: 1px solid rgba(255, 255, 255, 0.555);\n    padding: 15px 0;\n  }\n\n  .btn-menu {\n    display: block;\n    border: none;\n    margin-top: 17px;\n    background-color: transparent;\n    color: #f1f1f1;\n  }\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/tiempo.scss":
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/tiempo.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".contenedor-tiempo {\n  margin-bottom: 20px;\n}\n\n.titulofuncionalidad {\n  color: white;\n  text-align: center;\n}\n\n.subtitulofuncionalidad {\n  color: white;\n  text-align: center;\n  margin-top: 40px;\n}\n\n.inputfuncionalidad {\n  margin-top: 50px;\n  text-align: center;\n  width: 50%;\n  margin-left: 25%;\n  margin-right: 25%;\n  margin-bottom: 25px;\n}\n\n.marcotemporal {\n  background: rgb(0, 0, 0);\n  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(33, 33, 33) 35%, rgb(90, 90, 90) 100%);\n  margin-left: 25%;\n  margin-right: 25%;\n  border-radius: 12px;\n  border: #4FFF00 2px solid;\n}\n\n.definicion {\n  color: white;\n  margin-left: 15%;\n  margin-right: 15%;\n  text-align: center;\n}\n\n.resultado {\n  font-size: 20px;\n  color: white;\n  text-align: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -33438,6 +33584,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_menu_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/sass/tiempo.scss":
+/*!************************************!*\
+  !*** ./resources/sass/tiempo.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_tiempo_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./tiempo.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/tiempo.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_tiempo_scss__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_tiempo_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

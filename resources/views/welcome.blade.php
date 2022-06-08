@@ -16,5 +16,7 @@
                 las comidas y eventos que organizamos para seguir dándonos a conocer, y que cada vez más personas puedan
                 unirse a nuestra familia motera</p>
             </div>
+
+            <div id="tiempo"></div>
 </section>
 @endsection

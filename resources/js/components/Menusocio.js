@@ -52,7 +52,7 @@ function Menusocio() {
                         <li className="enlace-menu"><a href="/socio">Socios</a></li>
                     </div>
                     <div className='rightmenu'>
-                        <li className="enlace-menu"><a href="localhost/logout">Cuenta</a></li>
+                        <li className="enlace-menu"><a href="/home">Cuenta</a></li>
                     </div>
                 </ul>
             )}

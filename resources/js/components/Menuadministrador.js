@@ -52,7 +52,7 @@ function Menuadministrador() {
                         <li className="enlace-menu"><a href="/administrador">Admin</a></li>
                     </div>
                     <div className='rightmenu'>
-                        <li className="enlace-menu"><a href="localhost/logout">Cuenta</a></li>
+                        <li className="enlace-menu"><a href="/home">Cuenta</a></li>
                     </div>
                 </ul>
             )}

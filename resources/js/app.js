@@ -37,3 +37,7 @@ require('./components/Eventos');
 /** Galerías */
 
 require('./components/Galerias');
+
+/** Tiempo */
+
+require('./components/Tiempo');
