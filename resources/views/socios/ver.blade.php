@@ -9,6 +9,13 @@
             <a href="{{ route('socios.index') }}">Ver listado de Socios</a>
             <div class="ficha-administracion">
                 <div>
+                    <div>
+                        @if ($socio->foto_carnet)
+                                    <img class="imagen-ver" src="{{ asset('img/socios/'.$socio->foto_carnet) }}" alt="{{ $socio->foto_carnet }}">
+                                @else
+                                    Sin imagen
+                                @endif
+                    </div>
                     <p> Usuario: {{ $socio->usuario_id }}</p>
                     <p> Nombre: {{ $socio->nombre_socio }}</p>
                     <p> Apellidos: {{ $socio->apellidos }}</p>

@@ -24,7 +24,7 @@
                             <td>{{ $user->password }}</td>
                             <td>
                                 @if ($user->avatar)
-                                    <img src="{{ asset('img/users/'.$user->avatar) }}" alt="{{ $user->name }}">
+                                    <img class="imagen-tabla" src="{{ asset('img/users/'.$user->avatar) }}" alt="{{ $user->name }}">
                                 @else
                                     Sin imagen
                                 @endif

@@ -16,7 +16,13 @@
                     </tr>
                     @foreach ($galerias as $galeria)
                         <tr>
-                            <td>{{ $galeria->imagen }}</td>
+                            <td>
+                            @if ($galeria->imagen)
+                                <img class="imagen-tabla" src="{{ asset('img/galerias/'.$galeria->imagen) }}" alt="{{ $galeria->imagen }}">
+                            @else
+                                Sin imagen
+                            @endif
+                            </td>
                             <td>{{ $galeria->evento_id }}</td>
                             <td>
                                 <button class="btn-general-administracion"><a href="{{ route('galerias.show', $galeria->id) }}">Ver</a></button>

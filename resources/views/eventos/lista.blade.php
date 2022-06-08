@@ -21,7 +21,13 @@
                     @foreach ($eventos as $evento)
                         <tr>
                             <td>{{ $evento->nombre_evento }}</td>
-                            <td>{{ $evento->cartel }}</td>
+                            <td>
+                            @if ($evento->cartel)
+                                <img class="imagen-tabla" src="{{ asset('img/eventos/'.$evento->cartel) }}" alt="{{ $evento->cartel }}">
+                            @else
+                                Sin imagen
+                            @endif
+                            </td>
                             <td>{{ $evento->fecha_inicio }}</td>
                             <td>{{ $evento->descripcion }}</td>
                             <td>{{ $evento->colaborador->nombre_colaborador }}</td>

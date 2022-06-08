@@ -32,7 +32,12 @@
                             <td>{{ $socio->direccion }}</td>
                             <td>{{ $socio->padrino }}</td>
                             <td>{{ $socio->motocicleta }}</td>
-                            <td>{{ $socio->foto_carnet }}</td>
+                            <td>
+                            @if ($socio->foto_carnet)
+                                    <img class="imagen-tabla" src="{{ asset('img/socios/'.$socio->foto_carnet) }}" alt="{{ $socio->foto_carnet }}">
+                                @else
+                                    Sin imagen
+                                @endif
                             <td>
                                 <div>
                                     {!! Form::open(['route' => ['socios.estado', $socio->id], 'method' => 'POST']) !!}

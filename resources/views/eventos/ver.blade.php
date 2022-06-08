@@ -9,8 +9,14 @@
             <a href="{{ route('eventos.index') }}">Ver listado de Eventos</a>
             <div class="ficha-administracion">
                 <div>
+                    <div>
+                        @if ($evento->cartel)
+                                <img class="imagen-ver" src="{{ asset('img/eventos/'.$evento->cartel) }}" alt="{{ $evento->cartel }}">
+                            @else
+                                Sin imagen
+                            @endif
+                    </div>
                     <p>Nombre:{{ $evento->nombre_evento }}</p>
-                    <p>Cartel: {{ $evento->cartel }}</p>
                     <p>Fecha Inicio: {{ $evento->fecha_inicio }}</p>
                     <p>Descripción: {{ $evento->descripcion }}</p>
                     <p>Colaborador: {{ $evento->colaborador_id }}</p>
