@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ColaboradorController;
 use App\Http\Controllers\EventoController;
@@ -31,7 +32,9 @@ Route::get('/legal', function () { return view('legal'); });
 Route::get('/privacidad', function () { return view('privacidad'); });
 Route::get('/cookie', function () { return view('cookie'); });
 Route::get('/administrador', function () { return view('administrador'); });
-Route::get('/usuario', function () { return view('usuario'); });
+// Route::get('/usuario', function () { return view('usuario'); });
+Route::get('usuario/{user}', [UserController::class, 'profile']);
+Route::put('usuario/update/{user}', [UserController::class, 'update_profile'])->name('usuario.actualizar');
 
 Auth::routes();
 

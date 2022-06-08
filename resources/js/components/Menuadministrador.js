@@ -5,7 +5,6 @@ import logo from '../../img/recursos/logo.png'
 import { useState, useEffect } from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
-
 function Menuadministrador() {
 
     // Define el estado del menú a falso para que por defecto no muestre el desplegable.
@@ -53,7 +52,7 @@ function Menuadministrador() {
                         <li className="enlace-menu"><a href="/administrador">Admin</a></li>
                     </div>
                     <div className='rightmenu'>
-                        <li className="enlace-menu"><a href="/usuario">Usuario</a></li>
+                        <li className="enlace-menu"><a href="localhost/logout">Cuenta</a></li>
                     </div>
                 </ul>
             )}

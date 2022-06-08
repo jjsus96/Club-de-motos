@@ -116,4 +116,39 @@ class UserController extends Controller
         }
         return redirect()->route('users.index')->with('success', 'Se eliminó correctamente');
     }
+
+    public function profile($id)
+    {
+        $user = User::findOrFail($id);
+        return view('usuario', compact('user'));
+    }
+
+    public function update_profile(Request $request, User $user)
+    {
+        $user->update([
+            'name' => ucwords($request->name),
+            'email' => mb_strtolower($request->email)
+        ]);
+        // En caso que tenga datos el password
+        if ($request->password) {
+            $user->update(['password' => Hash::make($request->password)]);
+        }
+        //Almacenar avatar
+        if ($request->hasFile('avatar')) {
+            $currentAvatar = $user->avatar;
+            //Obtiene los valores del archivo
+            $file = $request->file('avatar');
+            //Asigna un nombre aleatorio con la fecha de creación
+            $filename = time() . '.' . $file->extension();
+            //Almacena el avatar en la carpeta users en /public/img/users
+            $file->move(public_path('img\\users'), $filename);
+            //Actualiza la información del avatar
+            $user->update(['avatar' => $filename]);
+            // Valida si existe imagen anterior y la elimina
+            if ($currentAvatar != '') {
+                unlink(public_path('img\\users\\' . $currentAvatar));
+            }
+        }
+        return redirect()->back()->with('success', 'Se actualizó correctamente');
+    }
 }

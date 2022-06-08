@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+Route::get('/logout', [LoginController::class,'logout']);
 Route::get('/socios', [SocioController::class, 'datosSocio']);
 Route::get('/galerias', [GaleriaController::class, 'datosGaleria']);
 Route::get('/eventos', [EventoController::class, 'datosEvento']);

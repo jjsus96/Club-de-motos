@@ -3,12 +3,12 @@
 <section>
     <div class="contenedor-administracion">
         <div class="formulario-administracion">
-            {!! Form::model(auth()->user('user'), ['route' => ['users.update', auth()->user('user')], 'method' => 'PUT', 'files' => true]) !!}
+            {!! Form::model($user, ['route' => ['usuario.actualizar', $user], 'method' => 'PUT', 'files' => true]) !!}
             <h1 class="titulo-formulario"> Editar Usuario </h1>
             <label>Nombre:</label>
-            {!! Form::text('name', null, ['placeholder' => 'Nombre']) !!}
+            {!! Form::text('name', $user->name, ['placeholder' => 'Nombre']) !!}
             <label>Email:</label>
-            {!! Form::email('email', null, ['placeholder' => 'Correo electrónico']) !!}
+            {!! Form::email('email', $user->email, ['placeholder' => 'Correo electrónico']) !!}
             <label>Contraseña:</label>
             {!! Form::password('password', null, ['placeholder' => 'Contraseña']) !!}
             <label>Avatar:</label>

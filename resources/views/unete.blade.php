@@ -10,7 +10,8 @@
             <h1 class="titulo-formulario"> Únete </h1>
 
             <label>Usuario:</label>
-            {!! Form::text('usuario_id', null, ['placeholder' => 'Usuario']) !!}
+            {!! Form::text('usuario', Auth::user()->name, ['placeholder' => 'Usuario', 'readonly' => true]) !!}
+            {!! Form::text('usuario_id', Auth::user()->id, ['hidden' => true]) !!}
             @error('usuario_id')
                 <span class="text-danger">{{ $message }}</span>
             @enderror

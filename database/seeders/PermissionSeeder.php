@@ -20,6 +20,12 @@ class PermissionSeeder extends Seeder
         $role1 = Role::create(['name' => 'Socio']);
         $role2 = Role::create(['name' => 'Usuario']);
 
+        Permission::create(['name' => 'administrador'])->assignRole($role);
+        Permission::create(['name' => 'usuario'])->assignRole($role, $role1, $role2);
+        Permission::create(['name' => 'unete'])->assignRole($role, $role2);
+
+        /**------------------------- Rutas de administración -------------------------*/
+
         Permission::create(['name' => 'colaboradores.crear'])->assignRole($role);
         Permission::create(['name' => 'colaboradores.editar'])->assignRole($role);
         Permission::create(['name' => 'colaboradores.lista'])->assignRole($role);

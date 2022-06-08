@@ -88,6 +88,29 @@ input, select{
     font-size: 15px;
 }
 
+.botones-cuenta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-logout {
+    border: 1px solid #630202;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: red;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
 /*---------------------------------------------/Formularios Administración/---------------------------------------------*/
 
 .formulario-administracion {
@@ -418,6 +441,7 @@ td {
     padding-left: 2%;
     padding-right: 2%;
 }
+
 
 /*---------------------------------------------/Responsive Para evitar descuadres/---------------------------------------------*/
 

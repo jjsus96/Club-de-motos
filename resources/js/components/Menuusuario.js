@@ -53,7 +53,7 @@ function Menuusuario() {
                         <li className="enlace-menu"><a href="/unete">Únete</a></li>
                     </div>
                     <div className='rightmenu'>
-                        <li className="enlace-menu"><a href="/usuario">Usuario</a></li>
+                        <li className="enlace-menu"><a href="localhost/logout">Cuenta</a></li>
                     </div>
                 </ul>
             )}

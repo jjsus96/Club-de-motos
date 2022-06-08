@@ -721,8 +721,8 @@ function Menuadministrador() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
           className: "enlace-menu",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-            href: "/usuario",
-            children: "Usuario"
+            href: "localhost/logout",
+            children: "Cuenta"
           })
         })
       })]
@@ -858,8 +858,8 @@ function Menusocio() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
           className: "enlace-menu",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-            href: "/usuario",
-            children: "Usuario"
+            href: "localhost/logout",
+            children: "Cuenta"
           })
         })
       })]
@@ -1001,8 +1001,8 @@ function Menuusuario() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
           className: "enlace-menu",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-            href: "/usuario",
-            children: "Usuario"
+            href: "localhost/logout",
+            children: "Cuenta"
           })
         })
       })]

@@ -22,7 +22,13 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->password }}</td>
-                            <td>{{ $user->avatar }}</td>
+                            <td>
+                                @if ($user->avatar)
+                                    <img src="{{ asset('img/users/'.$user->avatar) }}" alt="{{ $user->name }}">
+                                @else
+                                    Sin imagen
+                                @endif
+                            </td>
                             <td>{{ $user->role->name }}</td>
                             <td>
                                 <button class="btn-general-administracion"><a href="{{ route('users.show', $user->id) }}">Ver</a></button>
