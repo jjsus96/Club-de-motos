@@ -41,3 +41,5 @@ require('./components/Galerias');
 /** Tiempo */
 
 require('./components/Tiempo');
+
+/** Validaciones */

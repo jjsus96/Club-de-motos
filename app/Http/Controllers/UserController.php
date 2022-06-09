@@ -151,4 +151,6 @@ class UserController extends Controller
         }
         return redirect()->back()->with('success', 'Se actualizó correctamente');
     }
+
+
 }

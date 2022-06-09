@@ -1,14 +1,16 @@
 @extends('layouts.app')
 @section('content')
-<script src="{{ asset('js/components/Validacionesusuario.js') }}"></script>
 <section>
     <div class="contenedor-administracion">
         <div class="formulario-administracion">
             {!! Form::model($user, ['route' => ['usuario.actualizar', $user], 'method' => 'PUT', 'files' => true]) !!}
             <h1 class="titulo-formulario"> Editar Usuario </h1>
             <label>Nombre:</label>
-            {!! Form::text('name', $user->name, ['placeholder' => 'Nombre', 'onfocusout'=>'validarnombrecompleto()' ]) !!}
+            {!! Form::text('name', $user->name, ['placeholder' => 'Nombre']) !!}
             <p id="errornombre"></p>
+            @error('name')
+                <div>{{ $message }}</div>
+            @enderror
             <label>Email:</label>
             {!! Form::email('email', $user->email, ['placeholder' => 'Correo electrónico']) !!}
             <p id="erroremail"></p>

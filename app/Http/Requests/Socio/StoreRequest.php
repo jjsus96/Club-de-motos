@@ -19,7 +19,7 @@ class StoreRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return arrayci
+     * @return array
      */
     public function rules()
     {

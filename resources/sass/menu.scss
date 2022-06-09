@@ -1,131 +1,113 @@
 nav {
-    position: fixed;
-    width: 100%;
-    margin-top: -25px;
-    background: #191919;
-    border-bottom: 4px solid #4FFF00;
-    z-index: 100;
-  }
-
-  .list {
-    list-style-type: none;
-    background: #191919;
-    height: 100%;
-    display: flex;
-    position: relative;
-    padding: 0;
-  }
-
-  .enlace-menu {
-    margin-right: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #f1f1f1;
-    cursor: pointer;
-  }
-
-  .btn-menu {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    color: #000;
-    font-size: 18px;
-  }
-
-  .logo{
-      height: 50px;
-      width: 50px;
-      margin-right: 40px;
-      margin-left: 20px;
-      margin-top: -10px;
-      margin-bottom: -20px;
-  }
-
-  .logomovil{
-    height: 0px;
-    width: 0px;
-    visibility: hidden;
+	position: fixed;
+	width: 100%;
+	margin-top: -25px;
+	background: #191919;
+	border-bottom: 4px solid #4FFF00;
+	z-index: 100;
 }
-
-  .leftmenu{
-    width:100%;
-    display: flex;
+.list {
+	list-style-type: none;
+	background: #191919;
+	height: 100%;
+	display: flex;
+	position: relative;
+	padding: 0;
 }
-
-  .rightmenu{
-    width:100%;
-    display: flex;
-    justify-content: flex-end;
+.enlace-menu {
+	margin-right: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #f1f1f1;
+	cursor: pointer;
 }
-
-  @media screen and (max-width: 900px) {
-
-    nav {
-        position: fixed;
-        width: 100%;
-        margin-top: 0px;
-        background: #191919;
-        border-bottom: 4px solid #4FFF00;
-      }
-
-    .list {
-      flex-direction: column;
-      margin-left: auto;
-      margin-right: auto;
-      height: auto;
-      padding: 0;
-    }
-
-    .leftmenu{
-        width:100%;
-        display: block;
-        justify-content: center;
-    }
-
-      .rightmenu{
-        width:100%;
-        display: block;
-        justify-content: center;
-    }
-
-    .logo{
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 10px;
-        width: 0px;
-        height: 0px;
-        display: block;
-        justify-content: center;
-        visibility: hidden;
-    }
-
-    .logomovil{
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        height: 50px;
-        width: 50px;
-        display: block;
-        justify-content: center;
-        visibility: visible;
-    }
-
-
-    .enlace-menu {
-      width: 100%;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.555);
-      padding: 15px 0;
-
-    }
-
-    .btn-menu {
-      display: block;
-      border: none;
-      margin-top: 17px;
-      background-color: transparent;
-      color: #f1f1f1;
-    }
-  }
+.btn-menu {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 7px;
+	color: #000;
+	font-size: 18px;
+}
+.logo {
+	height: 50px;
+	width: 50px;
+	margin-right: 40px;
+	margin-left: 20px;
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
+.logomovil {
+	height: 0px;
+	width: 0px;
+	visibility: hidden;
+}
+.leftmenu {
+	width: 100%;
+	display: flex;
+}
+.rightmenu {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+@media screen and (max-width: 900px) {
+	nav {
+		position: fixed;
+		width: 100%;
+		margin-top: 0px;
+		background: #191919;
+		border-bottom: 4px solid #4FFF00;
+	}
+	.list {
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		height: auto;
+		padding: 0;
+	}
+	.leftmenu {
+		width: 100%;
+		display: block;
+		justify-content: center;
+	}
+	.rightmenu {
+		width: 100%;
+		display: block;
+		justify-content: center;
+	}
+	.logo {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		width: 0px;
+		height: 0px;
+		display: block;
+		justify-content: center;
+		visibility: hidden;
+	}
+	.logomovil {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		height: 50px;
+		width: 50px;
+		display: block;
+		justify-content: center;
+		visibility: visible;
+	}
+	.enlace-menu {
+		width: 100%;
+		text-align: center;
+		border-top: 1px solid rgba(255, 255, 255, 0.555);
+		padding: 15px 0;
+	}
+	.btn-menu {
+		display: block;
+		border: none;
+		margin-top: 17px;
+		background-color: transparent;
+		color: #f1f1f1;
+	}
+}

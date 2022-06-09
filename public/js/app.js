@@ -60,6 +60,7 @@ __webpack_require__(/*! ./components/Galerias */ "./resources/js/components/Gale
 
 
 __webpack_require__(/*! ./components/Tiempo */ "./resources/js/components/Tiempo.js");
+/** Validaciones */
 
 /***/ }),
 
@@ -1208,7 +1209,7 @@ function Tiempo() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
       className: "titulofuncionalidad",
       id: "clima",
-      children: "\xBFQuieres saber si el tiempo para tu ruta?"
+      children: "\xBFQuieres saber el tiempo para tu ruta?"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
       className: "subtitulofuncionalidad",
       children: "EL TIEMPO"
@@ -1327,7 +1328,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".footer-general {\n  background-color: #191919;\n  box-sizing: border-box;\n  width: 100%;\n  text-align: left;\n  padding: 20px 0px 10px 0px;\n  border-top: 4px solid #4FFF00;\n}\n\n.footer-general .footer-izq,\n.footer-general .footer-cntr,\n.footer-general .footer-der {\n  display: inline-block;\n  vertical-align: top;\n}\n\n/* Footer Izquierdo */\n.footer-general .footer-izq {\n  width: 30%;\n}\n\n/* Footer Central */\n.footer-general .footer-cntr {\n  width: 40%;\n}\n\n.footer-general .footer-cntr p {\n  display: inline-block;\n  color: #ffffff;\n}\n\n.footer-general .footer-cntr p span {\n  display: block;\n  font-weight: normal;\n  font-size: 14px;\n  line-height: 2;\n}\n\n/* Footer Derecho */\n.footer-general .footer-der {\n  width: 30%;\n  color: #ffffff;\n  text-align: center;\n  margin-top: 20px;\n  margin-bottom: -30px;\n}\n\n.footer-general .footer-icons a {\n  display: inline-block;\n  width: 35px;\n  height: 35px;\n  background-color: #33383b;\n  border-radius: 2px;\n  font-size: 20px;\n  color: #f1f1f1;\n  text-align: center;\n  line-height: 35px;\n  margin-right: 3px;\n  margin-top: 20px;\n}\n\n.logofooter {\n  width: 150px;\n  display: block;\n  text-align: center;\n  margin: auto;\n}\n\n.fegam {\n  width: 350px;\n  display: block;\n  margin: auto;\n  margin-top: 50px;\n}\n\n.marcafooter {\n  text-align: center;\n  color: #f1f1f1;\n}\n\n.enlaces-footer {\n  display: block;\n}\n\n/* Responsive */\n@media (max-width: 900px) {\n  .footer-general .footer-izq,\n.footer-general .footer-cntr,\n.footer-general .footer-der {\n    display: block;\n    width: 100%;\n    margin-bottom: 40px;\n    text-align: center;\n  }\n\n  .footer-general .footer-cntr i {\n    margin-left: 0;\n  }\n\n  .fegam {\n    width: 300px;\n    display: block;\n    margin: auto;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".footer-general {\n  background-color: #191919;\n  box-sizing: border-box;\n  width: 100%;\n  text-align: left;\n  padding: 20px 0px 10px 0px;\n  border-top: 4px solid #4FFF00;\n}\n\n.footer-general .footer-izq {\n  display: inline-block;\n  vertical-align: top;\n  width: 30%;\n}\n.footer-general .footer-cntr {\n  display: inline-block;\n  vertical-align: top;\n  width: 40%;\n}\n.footer-general .footer-cntr p {\n  display: inline-block;\n  color: #ffffff;\n}\n.footer-general .footer-cntr p span {\n  display: block;\n  font-weight: normal;\n  font-size: 14px;\n  line-height: 2;\n}\n.footer-general .footer-der {\n  display: inline-block;\n  vertical-align: top;\n  width: 30%;\n  color: #ffffff;\n  text-align: center;\n  margin-top: 20px;\n  margin-bottom: -30px;\n}\n.footer-general .footer-icons a {\n  display: inline-block;\n  width: 35px;\n  height: 35px;\n  background-color: #33383b;\n  border-radius: 2px;\n  font-size: 20px;\n  color: #f1f1f1;\n  text-align: center;\n  line-height: 35px;\n  margin-right: 3px;\n  margin-top: 20px;\n}\n\n.logofooter {\n  width: 150px;\n  display: block;\n  text-align: center;\n  margin: auto;\n}\n\n.fegam {\n  width: 350px;\n  display: block;\n  margin: auto;\n  margin-top: 50px;\n}\n\n.marcafooter {\n  text-align: center;\n  color: #f1f1f1;\n}\n\n.enlaces-footer {\n  display: block;\n}\n\n@media (max-width: 900px) {\n  .footer-general .footer-izq {\n    display: block;\n    width: 100%;\n    margin-bottom: 40px;\n    text-align: center;\n  }\n  .footer-general .footer-cntr {\n    display: block;\n    width: 100%;\n    margin-bottom: 40px;\n    text-align: center;\n  }\n  .footer-general .footer-cntr i {\n    margin-left: 0;\n  }\n  .footer-general .footer-der {\n    display: block;\n    width: 100%;\n    margin-bottom: 40px;\n    text-align: center;\n  }\n\n  .fegam {\n    width: 300px;\n    display: block;\n    margin: auto;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

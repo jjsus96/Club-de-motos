@@ -111,6 +111,10 @@ input, select{
 
 }
 
+.ocultar{
+    display: none;
+}
+
 /*---------------------------------------------/Formularios Administración/---------------------------------------------*/
 
 .formulario-administracion {
@@ -348,7 +352,7 @@ td {
 
   @media all and (min-width: 1024px) {
     .grid-gallery {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 
@@ -376,9 +380,7 @@ td {
     grid-row: span 2;
   }
 
-  .grid-gallery__item:nth-child(11n+9) {
-    grid-row: span 3;
-  }
+
 
   .grid-gallery__image {
     width: 100%;

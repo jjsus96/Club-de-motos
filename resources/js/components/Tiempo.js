@@ -29,7 +29,7 @@ function Tiempo() {
 
   return (
     <div className='contenedor-tiempo'>
-        <h2 className='titulofuncionalidad' id='clima'>¿Quieres saber si el tiempo para tu ruta?</h2>
+        <h2 className='titulofuncionalidad' id='clima'>¿Quieres saber el tiempo para tu ruta?</h2>
         <h3 className='subtitulofuncionalidad'>EL TIEMPO</h3>
         <p className='definicion'>Introduce el nombre de cualquier ciudad para saber sus condiciones meteorológicas en este momento.</p>
         <input className='inputfuncionalidad'

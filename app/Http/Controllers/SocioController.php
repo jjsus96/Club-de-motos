@@ -139,4 +139,36 @@ class SocioController extends Controller
         //dd($socio);
         return redirect()->route('socios.index')->with('success', 'Se Activo/Desactivo el socio!');
     }
+
+    public function profile($id)
+    {
+        $user = User::findOrFail($id);
+        return view('usuario', compact('user'));
+    }
+
+    public function create_profile(Request $request, Socio $socio)
+    {
+        $socio = Socio::create([
+            'usuario_id' => $request->usuario_id,
+            'nombre_socio' => ucwords($request->nombre_socio),
+            'apellidos' => ucwords($request->apellidos),
+            'fecha_nacimiento' => $request->fecha_nacimiento,
+            'telefono' => $request->telefono,
+            'direccion' => ucwords($request->direccion),
+            'padrino' => ucwords($request->padrino),
+            'motocicleta' => ucwords($request->motocicleta)
+           ]);
+           //Almacenar foto_carnet
+           if ($request->hasFile('foto_carnet')) {
+            //Obtiene los valores del archivo
+            $file= $request->file('foto_carnet');
+            //Asigna un nombre aleatorio con la fecha de creación
+            $filename= time().'.'.$file->extension();
+            //Almacena el avatar en la carpeta users en /public/img/socios
+            $file-> move(public_path('img\\socios'), $filename);
+            //Actualiza la información de la foto_carnet
+            $socio->update(['foto_carnet' => $filename]);
+        }
+        return redirect()->back()->with('success', 'Se actualizó correctamente');
+    }
 }

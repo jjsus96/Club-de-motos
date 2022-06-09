@@ -35,6 +35,7 @@ Route::get('/administrador', function () { return view('administrador'); });
 // Route::get('/usuario', function () { return view('usuario'); });
 Route::get('usuario/{user}', [UserController::class, 'profile']);
 Route::put('usuario/update/{user}', [UserController::class, 'update_profile'])->name('usuario.actualizar');
+Route::post('socio/create', [SocioController::class, 'create_profile'])->name('socio.crear');
 
 Auth::routes();
 

@@ -15,15 +15,20 @@ formulario.addEventListener("submit", (evt) =>{
     }
 });
 
+console.log("Prueba")
+
 function validarnombre() {
 
     if (!nombre.value.match(regnombre)) {
         errornombre.innerHTML = "El nombre no ha sido introducido correctamente";
+        console.log("Prueba")
     }
     else {
         errornombrecom.innerHTML = "";
         return true;
+        console.log("Prueba")
     }
+
 }
 
 function validaremail() {
