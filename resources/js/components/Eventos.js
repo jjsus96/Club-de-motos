@@ -15,7 +15,7 @@ function Eventos() {
 
     //Ruta para realizar la llamada a la api.
 
-    const endpoint = 'http://127.0.0.1:8000/api'
+    const endpoint = 'http://localhost:8000/api'
 
     //Variable que almacena los valores a mostrar en el formulario.
 
