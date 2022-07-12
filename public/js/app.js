@@ -60,7 +60,6 @@ __webpack_require__(/*! ./components/Galerias */ "./resources/js/components/Gale
 
 
 __webpack_require__(/*! ./components/Tiempo */ "./resources/js/components/Tiempo.js");
-/** Validaciones */
 
 /***/ }),
 
@@ -115,7 +114,7 @@ function Eventos() {
     showEventos();
   }, []); //Ruta para realizar la llamada a la api.
 
-  var endpoint = 'http://127.0.0.1:8000/api'; //Variable que almacena los valores a mostrar en el formulario.
+  var endpoint = 'https://127.0.0.1:8000/api'; //Variable que almacena los valores a mostrar en el formulario.
 
   var showEventos = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -404,7 +403,7 @@ function Galerias() {
     showGalerias();
   }, []); //Ruta para realizar la llamada a la api.
 
-  var endpoint = 'http://127.0.0.1:8000/api'; //Variable que almacena los valores a mostrar en el formulario.
+  var endpoint = 'https://127.0.0.1:8000/api'; //Variable que almacena los valores a mostrar en el formulario.
 
   var showGalerias = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -1080,7 +1079,7 @@ function Socios() {
     showSocios();
   }, []); //Ruta para realizar la llamada a la api.
 
-  var endpoint = 'http://127.0.0.1:8000/api'; //Variable que almacena los valores a mostrar en el formulario.
+  var endpoint = 'https://127.0.0.1:8000/api'; //Variable que almacena los valores a mostrar en el formulario.
 
   var showSocios = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -1352,7 +1351,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "nav {\n  position: fixed;\n  width: 100%;\n  margin-top: -25px;\n  background: #191919;\n  border-bottom: 4px solid #4FFF00;\n  z-index: 100;\n}\n\n.list {\n  list-style-type: none;\n  background: #191919;\n  height: 100%;\n  display: flex;\n  position: relative;\n  padding: 0;\n}\n\n.enlace-menu {\n  margin-right: 20px;\n  font-size: 20px;\n  text-transform: uppercase;\n  color: #f1f1f1;\n  cursor: pointer;\n}\n\n.btn-menu {\n  display: none;\n  position: absolute;\n  right: 10px;\n  top: 7px;\n  color: #000;\n  font-size: 18px;\n}\n\n.logo {\n  height: 50px;\n  width: 50px;\n  margin-right: 40px;\n  margin-left: 20px;\n  margin-top: -10px;\n  margin-bottom: -20px;\n}\n\n.logomovil {\n  height: 0px;\n  width: 0px;\n  visibility: hidden;\n}\n\n.leftmenu {\n  width: 100%;\n  display: flex;\n}\n\n.rightmenu {\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n}\n\n@media screen and (max-width: 900px) {\n  nav {\n    position: fixed;\n    width: 100%;\n    margin-top: 0px;\n    background: #191919;\n    border-bottom: 4px solid #4FFF00;\n  }\n\n  .list {\n    flex-direction: column;\n    margin-left: auto;\n    margin-right: auto;\n    height: auto;\n    padding: 0;\n  }\n\n  .leftmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .rightmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .logo {\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 10px;\n    width: 0px;\n    height: 0px;\n    display: block;\n    justify-content: center;\n    visibility: hidden;\n  }\n\n  .logomovil {\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    height: 50px;\n    width: 50px;\n    display: block;\n    justify-content: center;\n    visibility: visible;\n  }\n\n  .enlace-menu {\n    width: 100%;\n    text-align: center;\n    border-top: 1px solid rgba(255, 255, 255, 0.555);\n    padding: 15px 0;\n  }\n\n  .btn-menu {\n    display: block;\n    border: none;\n    margin-top: 17px;\n    background-color: transparent;\n    color: #f1f1f1;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "nav {\n  position: fixed;\n  width: 100%;\n  margin-top: -25px;\n  background: #191919;\n  border-bottom: 4px solid #4FFF00;\n  z-index: 100;\n}\nnav a:hover {\n  color: #4FFF00;\n}\n\n.list {\n  list-style-type: none;\n  background: #191919;\n  height: 100%;\n  display: flex;\n  position: relative;\n  padding: 0;\n}\n\n.enlace-menu {\n  margin-right: 20px;\n  font-size: 20px;\n  text-transform: uppercase;\n  color: #f1f1f1;\n  cursor: pointer;\n}\n\n.btn-menu {\n  display: none;\n  position: absolute;\n  right: 10px;\n  top: 7px;\n  color: #000;\n  font-size: 18px;\n}\n\n.logo {\n  height: 50px;\n  width: 50px;\n  margin-right: 40px;\n  margin-left: 20px;\n  margin-top: -10px;\n  margin-bottom: -20px;\n}\n\n.logomovil {\n  height: 0px;\n  width: 0px;\n  visibility: hidden;\n}\n\n.leftmenu {\n  width: 100%;\n  display: flex;\n}\n\n.rightmenu {\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n}\n\n@media screen and (max-width: 900px) {\n  nav {\n    position: fixed;\n    width: 100%;\n    margin-top: 0px;\n    background: #191919;\n    border-bottom: 4px solid #4FFF00;\n  }\n\n  .list {\n    flex-direction: column;\n    margin-left: auto;\n    margin-right: auto;\n    height: auto;\n    padding: 0;\n  }\n\n  .leftmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .rightmenu {\n    width: 100%;\n    display: block;\n    justify-content: center;\n  }\n\n  .logo {\n    margin-left: auto;\n    margin-right: auto;\n    margin-bottom: 10px;\n    width: 0px;\n    height: 0px;\n    display: block;\n    justify-content: center;\n    visibility: hidden;\n  }\n\n  .logomovil {\n    margin-left: auto;\n    margin-right: auto;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    height: 50px;\n    width: 50px;\n    display: block;\n    justify-content: center;\n    visibility: visible;\n  }\n\n  .enlace-menu {\n    width: 100%;\n    text-align: center;\n    border-top: 1px solid rgba(255, 255, 255, 0.555);\n    padding: 15px 0;\n  }\n\n  .btn-menu {\n    display: block;\n    border: none;\n    margin-top: 17px;\n    background-color: transparent;\n    color: #f1f1f1;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27594,7 +27593,7 @@ function injectIntoDevTools(devToolsConfig) {
     scheduleRoot:  scheduleRoot ,
     setRefreshHandler:  setRefreshHandler ,
     // Enables DevTools to append owner stacks to error messages in DEV mode.
-    getCurrentFiber:  getCurrentFiberForDevTools 
+    getCurrentFiber:  getCurrentFiberForDevTools
   });
 }
 
@@ -33513,7 +33512,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_all_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./all.min.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/@fortawesome/fontawesome-free/css/all.min.css");
 
-            
+
 
 var options = {};
 
@@ -33543,7 +33542,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./footer.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/footer.scss");
 
-            
+
 
 var options = {};
 
@@ -33573,7 +33572,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_menu_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./menu.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/menu.scss");
 
-            
+
 
 var options = {};
 
@@ -33603,7 +33602,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_tiempo_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./tiempo.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/sass/tiempo.scss");
 
-            
+
 
 var options = {};
 
@@ -33901,7 +33900,7 @@ module.exports = function (list, options) {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -33915,17 +33914,17 @@ module.exports = function (list, options) {
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -33958,7 +33957,7 @@ module.exports = function (list, options) {
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -33970,7 +33969,7 @@ module.exports = function (list, options) {
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -33982,12 +33981,12 @@ module.exports = function (list, options) {
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -33998,11 +33997,11 @@ module.exports = function (list, options) {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/ 		
+/******/
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -34010,19 +34009,19 @@ module.exports = function (list, options) {
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/ 		
+/******/
 /******/ 		// no chunk on demand loading
-/******/ 		
+/******/
 /******/ 		// no prefetching
-/******/ 		
+/******/
 /******/ 		// no preloaded
-/******/ 		
+/******/
 /******/ 		// no HMR
-/******/ 		
+/******/
 /******/ 		// no HMR manifest
-/******/ 		
+/******/
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
+/******/
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -34047,25 +34046,25 @@ module.exports = function (list, options) {
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/ 		
+/******/
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+/******/
 /******/ })()
 ;

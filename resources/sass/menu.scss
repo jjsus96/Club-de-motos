@@ -5,6 +5,9 @@ nav {
 	background: #191919;
 	border-bottom: 4px solid #4FFF00;
 	z-index: 100;
+    a:hover{
+        color: #4FFF00;
+    }
 }
 .list {
 	list-style-type: none;

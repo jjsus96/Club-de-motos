@@ -28,7 +28,7 @@
             <div id="menu"></div>
         @else
         @if (auth()->user('$user')->hasRole('Socio'))
-            <div id="menumenusocio"></div>
+            <div id="menusocio"></div>
         @elseif(auth()->user('$user')->hasRole('Usuario'))
             <div id="menuusuario"></div>
         @elseif (auth()->user('$user')->hasRole('Administrator'))

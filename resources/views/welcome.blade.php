@@ -3,7 +3,7 @@
 @section('content')
     <section>
         <h1 class="titulo-inicio">¡Bienvenido!</h1>
-        <div class="contenedorinicio-izq">
+        <div class="contenedorinicio-izq bg-sky-300">
             <img class="imagen-inicio" src="./../images/Club.jpg">
         </div>
         <div class="contenedorinicio-der">
@@ -16,7 +16,5 @@
                 las comidas y eventos que organizamos para seguir dándonos a conocer, y que cada vez más personas puedan
                 unirse a nuestra familia motera</p>
             </div>
-
-            <div id="tiempo"></div>
 </section>
 @endsection
